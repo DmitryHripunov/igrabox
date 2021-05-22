@@ -1,0 +1,42 @@
+@import (reference) '../../less/variables.less';
+
+.title {
+  line-height: 1.33;
+  font-weight: 500;
+  font-size: 18px;
+
+  &_main {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+
+  &_bold {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  &_indent {
+    margin-bottom: 16px;
+  }
+}
+
+@media(min-width: @phone) {
+  .title {
+    line-height: 1.23;
+    font-size: 26px;
+
+    &_main {
+      font-size: 36px;
+      line-height: 1.33;
+    }
+  }
+}
+
+@media(min-width: @tablet) {
+  .title {
+    &_indent {
+      margin-bottom: 32px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import (reference) '../../less/variables.less';
+
+.pack {
+  &__list {
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    justify-content: space-between;
+
+    &::before {
+      content: '';
+      border-bottom: 1px dashed @canvas-text;
+      flex-grow: 1;
+      order: 1;
+    }
+  }
+
+  &__title {
+    order: 1;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+@media(min-width: @laptop) {
+  .pack {
+    font-size: 15px;
+  }
+}

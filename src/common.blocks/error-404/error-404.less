@@ -1,0 +1,48 @@
+@import (reference) '../../less/variables.less';
+
+.error-404 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  &__img-wrapper {
+    width: 200px;
+    height: 200px;
+    background: url('../../static/img/404/layout.png') center/cover no-repeat, 
+    url('../../static/img/404/bitmap.jpg') center/contain no-repeat;
+  }
+
+  &__btn {
+    height: 32px;
+    padding: 0 16px;
+  }
+}
+
+@media(min-width: @tablet) {
+  .error-404 {
+    justify-content: flex-start;
+    padding-top: 140px;
+
+    &__title {
+       font-size: 30px;
+    }
+  
+    &__img-wrapper {
+
+    }
+  
+    &__btn {
+      height: 40px;
+      padding: 0 21px;
+    }
+  }
+}

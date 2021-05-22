@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="vue-app">
+      ${require('./common.blocks/header/header.html')}
+
+      <main class="main">
+        <nav class="breadcrumbs">
+          <div class="container">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Главная страница</a>
+              </li>
+
+              <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link">Игрушки</a>
+              </li>
+
+              <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link">Конструкторы</a>
+              </li>
+
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link breadcrumbs__link_active"
+                  >Конструктор Attivio № 3(металл)</a
+                >
+              </li>
+            </ul>
+
+            <a href="/" class="breadcrumbs__mobile btn_untagged">
+              <svg class="breadcrumbs__mobile-arrow">
+                <use xlink:href="#arrow-back"></use>
+              </svg>
+              <span class="breadcrumbs__mobile-text">Конструкторы</span>
+            </a>
+          </div>
+        </nav>
+
+        <div class="item">
+          <div class="container">
+            <h1 class="item__title title_main">
+              Конструктор Attivio № 3(металл)
+            </h1>
+
+            <div class="item__top">
+              <div class="item__top-wrapper">
+                <div class="label-products label-products_green item__label">
+                  Специальное предложение
+                </div>
+
+                <a href="#comments_block" class="item__comments-link js-commens"
+                  >2 отзыва</a
+                >
+              </div>
+
+              <div class="item__id">
+                Код товара:
+                <span>003499</span>
+              </div>
+            </div>
+
+            <div class="section-grid">
+              <div class="section-grid__content">
+                <div class="swiper-container item__swiper js-item-slide">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide item__slide">
+                      <img
+                        src="${require('./static/img/banners/banner-2.jpg')}"
+                        alt=""
+                        class="item__slide-img"
+                      />
+                    </div>
+
+                    <div class="swiper-slide item__slide">
+                      <img
+                        src="${require('./static/img/banners/banner-1.jpg')}"
+                        alt=""
+                        class="item__slide-img"
+                      />
+                    </div>
+
+                    <div class="swiper-slide item__slide">
+                      <img
+                        src="${require('./static/img/banners/banner-5.jpg')}"
+                        alt=""
+                        class="item__slide-img"
+                      />
+                    </div>
+
+                    <div class="swiper-slide item__slide">
+                      <img
+                        src="${require('./static/img/banners/banner.jpg')}"
+                        alt=""
+                        class="item__slide-img"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="item__swiper-pagination swiper-pagination swiper-btn_pagination"
+                  ></div>
+
+                  <div class="swiper-btn_wrapper">
+                    <div class="swiper-btn swiper-btn_prev item_prev">
+                      <svg class="swiper-btn__svg icon_size_xl">
+                        <use xlink:href="#swiper-arrow-left"></use>
+                      </svg>
+                    </div>
+
+                    <div class="swiper-btn swiper-btn_next item_next">
+                      <svg class="swiper-btn__svg icon_size_xl">
+                        <use xlink:href="#swiper-arrow-right"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="swiper-container item__thumbs thumbs js-item-thumbs"
+                >
+                  <div class="swiper-wrapper item__thumbs-wrapper">
+                    <div
+                      class="swiper-slide item__thumbs-slide"
+                      style="background-image: url('${require('./static/img/banners/banner-2.jpg')}')"
+                    ></div>
+
+                    <div
+                      class="swiper-slide item__thumbs-slide"
+                      style="background-image: url('${require('./static/img/banners/banner-1.jpg')}')"
+                    ></div>
+
+                    <div
+                      class="swiper-slide item__thumbs-slide"
+                      style="background-image: url('${require('./static/img/banners/banner-5.jpg')}')"
+                    ></div>
+
+                    <div
+                      class="swiper-slide item__thumbs-slide"
+                      style="background-image: url('${require('./static/img/banners/banner.jpg')}')"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section-grid__aside">
+                <div class="section-grid__aside-wrapper">
+                  <div class="characteristics">
+                    <div class="characteristics__top-wrapper">
+                      <h2 class="characteristics__price">
+                        2450 ₽
+                        <span class="characteristics__old-price">
+                          2900 ₽
+                        </span>
+                      </h2>
+
+                      <div class="label-products">
+                        <div class="label-products__icon">
+                          <svg
+                            class="label-products__svg label-products__svg_colored icon_size_l"
+                          >
+                            <use xlink:href="#heart_colored"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p class="characteristics__footnote">
+                      Цены в интернет-магазине могут отличаться от цен
+                      в розничных магазинах
+                    </p>
+
+                    <div class="characteristics__action">
+                      ${require('./common.blocks/counter/counter.html')}
+
+                      <div class="characteristics__action-wrapper">
+                        <button
+                          class="characteristics__action-link characteristics__action-link_huge btn  btn_brand js-card-action"
+                        >
+                          <span class="btn__text ">в корзину</span>
+                        </button>
+
+                        <button
+                          class="characteristics__action-link btn btn_blue"
+                        >
+                          <span class="btn__text ">купить в 1 клик</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="characteristics__hashtag">
+                      <div class="hashtag">
+                        <ul class="hashtag__list hashtag__list_wrap">
+                          <li class="hashtag__item hashtag__item_wrap">
+                            <a href="#" class="hashtag__link">Мальчикам</a>
+                          </li>
+                          <li class="hashtag__item hashtag__item_wrap">
+                            <a
+                              href="#"
+                              class="hashtag__link hashtag__link_active"
+                              >От 10 лет</a
+                            >
+                          </li>
+                          <li class="hashtag__item hashtag__item_wrap">
+                            <a href="#" class="hashtag__link">Attivio</a>
+                          </li>
+                          <li class="hashtag__item hashtag__item_wrap">
+                            <a href="#" class="hashtag__link"
+                              >Металлические конструкторы</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="characteristics__desc">
+                      <div class="characteristics__text-wrapper js-desc">
+                        <p class="characteristics__desc-text ">
+                          Конструктор раскрывает перед ребенком неограниченные
+                          возможности моделирования и создания множества своих
+                          собственных моделей. Также в набор входит инструкция,
+                          руководствуясь которой можно собрать множество
+                          моделей, а так же множество замечательных вещей
+                          по собственным задумкам! Занятия с металлическими
+                          конструкторами развивают мелкую моторику рук,
+                          формируют творческий подход к конструированию моделей,
+                          что способствует развитию объемного мышления — одного
+                          из самых сложных видов мыслительного процесса. В набор
+                          входит: 160 элемента Конструктор раскрывает перед
+                          ребенком неограниченные возможности моделирования
+                          и создания множества своих собственных моделей. Также
+                          в набор входит инструкция, руководствуясь которой
+                          можно собрать множество моделей, а так же множество
+                          замечательных вещей по собственным задумкам! Занятия
+                          с металлическими конструкторами развивают мелкую
+                          моторику рук, формируют творческий подход
+                          к конструированию моделей, что способствует развитию
+                          объемного мышления — одного из самых сложных видов
+                          мыслительного процесса. В набор входит: 160 элемента
+                          Конструктор раскрывает перед ребенком неограниченные
+                          возможности моделирования и создания множества своих
+                          собственных моделей. Также в набор входит инструкция,
+                          руководствуясь которой можно собрать множество
+                          моделей, а так же множество замечательных вещей
+                          по собственным задумкам! Занятия с металлическими
+                          конструкторами развивают мелкую моторику рук,
+                          формируют творческий подход к конструированию моделей,
+                          что способствует развитию объемного мышления — одного
+                          из самых сложных видов мыслительного процесса. В набор
+                          входит: 160 элемента Конструктор раскрывает перед
+                          ребенком неограниченные возможности моделирования
+                          и создания множества своих собственных моделей. Также
+                          в набор входит инструкция, руководствуясь которой
+                          можно собрать множество моделей, а так же множество
+                          замечательных вещей по собственным задумкам! Занятия
+                          с металлическими конструкторами развивают мелкую
+                          моторику рук, формируют творческий подход
+                          к конструированию моделей, что способствует развитию
+                          объемного мышления — одного из самых сложных видов
+                          мыслительного процесса. В набор входит: 160 элемента
+                          Конструктор раскрывает перед ребенком неограниченные
+                          возможности моделирования и создания множества своих
+                          собственных моделей. Также в набор входит инструкция,
+                          руководствуясь которой можно собрать множество
+                          моделей, а так же множество замечательных вещей
+                          по собственным задумкам! Занятия с металлическими
+                          конструкторами развивают мелкую моторику рук,
+                          формируют творческий подход к конструированию моделей,
+                          что способствует развитию объемного мышления — одного
+                          из самых сложных видов мыслительного процесса. В набор
+                          входит: 160 элемента Конструктор раскрывает перед
+                          ребенком неограниченные возможности моделирования
+                          и создания множества своих собственных моделей. Также
+                          в набор входит инструкция, руководствуясь которой
+                          можно собрать множество моделей, а так же множество
+                          замечательных вещей по собственным задумкам! Занятия
+                          с металлическими конструкторами развивают мелкую
+                          моторику рук, формируют творческий подход
+                          к конструированию моделей, что способствует развитию
+                          объемного мышления — одного из самых сложных видов
+                          мыслительного процесса. В набор входит: 160 элемента
+                        </p>
+                      </div>
+
+                      <button class="characteristics__desc-btn js-desc-btn">
+                        <span
+                          class="characteristics__desc-control js-desc-spoiler"
+                          >Развернуть</span
+                        >
+
+                        <svg class="characteristics__desc-svg icon_size_m">
+                          <use xlink:href="#arrow-down"></use>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="characteristics__pack">
+                      <div class="pack">
+                        <ul class="pack__list">
+                          <li class="pack__item">
+                            <div class="pack__title">Габариты упаковки</div>
+                            <div class="pack__weight">10см x 40см x 35см</div>
+                          </li>
+
+                          <li class="pack__item">
+                            <div class="pack__title">Вес упаковки</div>
+                            <div class="pack__weight">0,3 кг</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="characteristics__info">
+                      <ul class="characteristics__info-list">
+                        <li
+                          class="characteristics__info-item characteristics__info_pick"
+                        >
+                          Можно забрать завтра в магазине при заказе до 15:00
+                        </li>
+
+                        <li
+                          class="characteristics__info-item characteristics__info_delivery"
+                        >
+                          Доставка в пункт выдачи бесплатно при заказе от 5000 ₽
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="characteristics__brand">
+                      <svg class="characteristics__brand-svg">
+                        <use xlink:href="#logo-mark"></use>
+                      </svg>
+
+                      <h3 class="characteristics__brand-title">
+                        Все товары бренда
+                      </h3>
+
+                      <a href="#" class="characteristics__brand-link"
+                        >Attivio</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section-grid__content">
+                <div class="page-section page-section_huge">
+                  <div class="info-block">
+                    <div class="info-block__article">
+                      <a href="#" class="info-block__link">
+                        <div
+                          class="info-block__img"
+                          style="background: url(${require('./static/img/new-products/np2.jpg')}) 50% 50% no-repeat; background-size: cover;"
+                        ></div>
+
+                        <h3 class="info-block__heading">
+                          Какой конструктор подойдет именно вашему малышу?
+                        </h3>
+                      </a>
+                    </div>
+
+                    <div class="info-block__article">
+                      <a href="#" class="info-block__link">
+                        <div
+                          class="info-block__img"
+                          style="background: url(${require('./static/img/new-products/np3.jpg')}) 50% 50% no-repeat; background-size: cover;"
+                        ></div>
+
+                        <h3 class="info-block__heading">
+                          Все что нужно знать о развивающих играх
+                        </h3>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item__products products">
+                  <h2 class="item__products-title title title_bold">
+                    Советуем посмотреть
+                  </h2>
+
+                  <div class="swiper-container js-item-products">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        ${require('./common.blocks/card/card.html')}
+                      </div>
+
+                      <div class="swiper-slide">
+                        ${require('./common.blocks/card/card.html')}
+                      </div>
+
+                      <div class="swiper-slide">
+                        ${require('./common.blocks/card/card.html')}
+                      </div>
+
+                      <div class="swiper-slide">
+                        ${require('./common.blocks/card/card.html')}
+                      </div>
+                    </div>
+                    <div
+                      class="swiper-pagination swiper-btn_pagination-visible item__products_pagination"
+                    ></div>
+
+                    <!-- <div class="swiper-btn_wrapper">
+                    <div class="swiper-btn swiper-btn_prev item-products_prev">
+                      <svg class="swiper-btn__svg icon_size_xl">
+                        <use xlink:href="#swiper-arrow-left"></use>
+                      </svg>
+                    </div>
+
+                    <div class="swiper-btn swiper-btn_next item-products_next">
+                      <svg class="swiper-btn__svg icon_size_xl">
+                        <use xlink:href="#swiper-arrow-right"></use>
+                      </svg>
+                    </div>
+                  </div> -->
+                  </div>
+                </div>
+
+                <div class="item__comments comments" id="comments_block">
+                  <h2 class="comments__title title title_bold">Отзывы (2)</h2>
+
+                  <ul class="comments__list">
+                    <li class="comments__item comments__item_coment">
+                      <div class="comments__data">
+                        <h3 class="comments__author">Ирина Шевцова</h3>
+                        <div class="comments__date">21.10.2020</div>
+                      </div>
+
+                      <p class="comments__text">
+                        Машина исправна. Все режимы функционируют. Все машинки
+                        этой серии очень красивые, со звуковыми, и световыми
+                        эффектами. Мне показалось, что управление удобное.
+                        Особенно понравились машины в ретро стиле. Но для внучек
+                        выбрала одну полицейскую машину (папа в полиции
+                        работает) и машинку дракона (просто - вау). Если бы еще
+                        и двери открывались!
+                      </p>
+
+                      <div class="comments__action">
+                        <a href="#" class="comments__action-btn">Ответить</a>
+                      </div>
+                    </li>
+
+                    <!-- спасибо ответ -->
+                    <li class="comments__item comments__item_reply">
+                      <div class="comments__data">
+                        <svg class="comments__data-svg">
+                          <use xlink:href="#logo-mark"></use>
+                        </svg>
+                        <h3 class="comments__author">Ирина Шевцова</h3>
+                        <div class="comments__date">21.10.2020</div>
+                      </div>
+
+                      <p class="comments__text">
+                        Спасибо за отзыв! Мы рады, что вам понравилось.
+                      </p>
+                    </li>
+
+                    <li class="comments__item comments__item_coment">
+                      <div class="comments__data">
+                        <h3 class="comments__author">Ирина Шевцова</h3>
+                        <div class="comments__date">21.10.2020</div>
+                      </div>
+
+                      <p class="comments__text">
+                        Машина исправна. Все режимы функционируют. Все машинки
+                        этой серии очень красивые, со звуковыми, и световыми
+                        эффектами. Мне показалось, что управление удобное.
+                        Особенно понравились машины в ретро стиле. Но для внучек
+                        выбрала одну полицейскую машину (папа в полиции
+                        работает) и машинку дракона (просто - вау). Если бы еще
+                        и двери открывались!
+                      </p>
+
+                      <div class="comments__action">
+                        <a href="#" class="comments__action-btn">Ответить</a>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <button class="btn btn_brand comments__write js-popup">
+                    <span class="btn__text">написать отзыв</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      ${require('./common.blocks/footer/footer.html')}
+      ${require('./common.blocks/order/order.html')}
+
+      <div class="popup">
+        <div class="popup__content">
+          <button class="popup__close close-btn js-close-btn">
+            <svg class="close-btn__svg icon_size_ml">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+
+          <h2 class="title_bold title_indent">Оставить свой отзыв</h2>
+
+          <form class="form">
+            <ul class="form__list">
+              <li class="form__item form__item_huge">
+                <label class="form__label form__label_max">
+                  <span class="form__heading">Как вас зовут?</span>
+                  <input
+                    type="text"
+                    class="form__input form__input_gray_text form__input_max"
+                    placeholder="Имя Фамилия"
+                    required
+                  />
+                </label>
+              </li>
+
+              <li class="form__item form__item_huge">
+                <label class="form__label form__label_max">
+                  <span class="form__heading">E-mail</span>
+                  <input
+                    type="email"
+                    class="form__input form__input_gray_text form__input_max"
+                    placeholder="электронная почта"
+                    required
+                  />
+                </label>
+              </li>
+
+              <li class="form__item form__item_huge">
+                <label class="form__label form__label_max">
+                  <span class="form__heading">пароль</span>
+
+                  <textarea
+                    class="form__textarea"
+                    placeholder="Что вы думаете об этом товаре?"
+                  ></textarea>
+                  <!-- <input type="password" class="form__input form__input_gray_text form__input_max"
+                  placeholder="введите пароль" required> -->
+                </label>
+              </li>
+            </ul>
+
+            <p class="form__desc">
+              Ваш адрес электронной почты не будет виден другим пользователям.
+              На вашу электронную почту будут приходить ответы. Перед
+              публикацией все сообщения проходят модерацию.
+            </p>
+
+            <button type="submit" class="btn btn_brand popup__btn">
+              <span class="btn__text_static">отправить</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

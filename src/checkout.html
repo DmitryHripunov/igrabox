@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    ${require('./common.blocks/header/header.html')}
+
+    <div class="main">
+      <div class="container">
+        <div class="page-section">
+          <div class="cart">
+            <h1 class="title title_main title_indent">Корзина(2)</h1>
+            
+            <form action="#" class="form">
+              <div class="inner-wrapper">
+                <ul class="form__list">
+                  <li class="form__item">
+                    <label class="form__label">
+                      <span class="form__heading">Как вас зовут?</span>
+                      <input class="form__input" type="text" placeholder="Имя Фамилия" required>
+                    </label>
+                  </li>
+
+                  <li class="form__item form__item_tel">
+                    <label class="form__label">
+                      <span class="form__heading">Ваш номер телефона</span>
+
+                      <div class="form-group form__input_success">
+                        <input class="form__input form__input_success" type="tel" placeholder="+7 (999) 999-99-99" required>
+
+                        <div class="help-block"></div>
+                      </div>
+                    </label>
+                  </li>
+
+                  <li class="form__item">
+                    <label class="form__label">
+                      <span class="form__heading">Электронная почта</span>
+
+                      <div class="form-group form__input_error">
+                        <input class="form__input" type="email" placeholder="Email" required>
+                      </div>
+
+                      <div class="help-block"></div>
+                    </label>
+                  </li>
+
+                  <li class="form__item">
+                    <label class="form__label">
+                      <span class="form__heading">Способ получения</span>
+                      <select class="form__select choices js-choice-delivery">
+                        <option value="" selected disabled>Самовывоз</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                      </select>
+
+                      <svg class="choices__svg icon_size_l">
+                        <use xlink:href="#arrow-down"></use>
+                      </svg>
+                    </label>
+
+                    <div class="form__desc">
+                      <p class="form__desc-text">
+                        Вы можете самостоятельно забрать заказ по адресу: ул. Перспективная, 2к2
+                      </p>
+
+                      <a href="#" class="form__desc-link">Контактная информация</a>
+                    </div>
+                  </li>
+
+                  <li class="form__item">
+                    <label class="form__label">
+                      <span class="form__heading">Способ оплаты</span>
+                      <select class="form__select choices js-choice-pay">
+                        <option value="" selected disabled>При получении заказа</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                      </select>
+
+                      <svg class="choices__svg icon_size_l">
+                        <use xlink:href="#arrow-down"></use>
+                      </svg>
+                    </label>
+                  </li>
+
+                  <li class="form__item form__item_textarea">
+                    <label class="form__label form__label_textarea">
+                      <span class="form__heading">Дополнительно</span>
+                      <textarea class="form__textarea" placeholder="Комментарий к заказу"></textarea>
+                    </label>
+                  </li>
+                </ul>
+
+                <div class="order-info">
+                  <h2 class="title order-info__title">Ваша корзина</h2>
+  
+                  <div class="order-info__list">
+                    <div class="order-info__item order-info__item_first">
+                      <h3 class="order-info__heading">Товары:</h3>
+                      <span class="order-info__price">3675 ₽</span>
+                    </div>
+                    <div class="order-info__item">
+                      <h3 class="order-info__heading">Скидка:</h3>
+                      <span class="order-info__price order-info__price_discont">- 450 ₽</span>
+                    </div>
+                  </div>
+  
+                  <div class="order-info__list order-info__list_total">
+                    <div class="order-info__item">
+                      <h3 class="order-info__heading">Итого:</h3>
+                      <span class="order-info__price">3225 ₽</span>
+                    </div>
+                  </div>
+                  <!-- заменить на type="submit" удалить thanks.js  -->
+                  <input type="button" class="btn btn_brand order-info__btn js-submit" value="подтвердить заказ">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ${require('./common.blocks/footer/footer.html')} -->
+
+    ${require('./common.blocks/thanks/thanks.html')}
+
+    <!-- <div class="thanks">
+      <div class="thanks__content">
+        <button class="thanks__close-btn">
+          <svg class="icon_size_l">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+  
+        <svg class="thanks__svg icon_size_xxl">
+          <use xlink:href="#thanks"></use>
+        </svg>
+  
+        <h3 class="thanks__title title title_bold title_indent">
+          Заказ <span>№894789789797</span> оформлен!
+        </h3>
+  
+        <p class="thanks__desc">
+          На ваш Email выслано письмо с подтверждением заказа и другой полезной информацией. Спасибо!
+        </p>
+  
+        <a href="/" class="thanks__link btn btn_brand">
+          <span class="btn__text">
+            вернуться к покупкам
+          </span> 
+        </a>
+      </div>
+    </div> -->
+  </div>
+</body>
+
+</html>

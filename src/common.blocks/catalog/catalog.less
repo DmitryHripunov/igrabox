@@ -1,0 +1,251 @@
+@import (reference) '../../less/variables.less';
+
+.catalog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: @color-white;
+  height: 100%;
+  overflow-y: auto;
+  font-size: 15px;
+  line-height: 1.33;
+  opacity: 0;
+  z-index: -10;
+  visibility: hidden;
+
+  &__wrapper {
+    position: relative;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 18px 42px 20px 64px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #eaeaea;
+  } 
+
+  &__title {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.45;
+    text-align: left;
+    border: none;
+    max-width: 300px;
+    transition: color @transition;
+  }
+
+  &__inner-img {
+    left: 16px;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+  }
+
+  &__arrow-svg {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transition: transform @transition,
+    fill @transition;
+    position: absolute;
+    top: 14px;
+    right: 16px;
+  }
+
+  &__item {
+    height: 1px;
+    transition: margin-bottom @transition;
+  }
+
+  &__list {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    z-index: -1;
+    visibility: hidden;
+
+    list-style: none;
+    display: inline;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: margin-top @transition,
+      opacity @transition,
+      margin-bottom @transition;
+  }
+
+  &__link {
+    display: inline-block;
+    transition: color @transition;
+    
+    &:hover {
+      color: @link-hover;
+    }
+  }
+
+  &.is-opened {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+    transition: opacity @transition;
+  
+    .catalog__close-btn {
+      opacity: 1;
+      z-index: 101;
+      visibility: visible;
+    }
+  }
+}
+
+.catalog__label.active {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .catalog__list {
+    position: static;
+    display: flex;
+    opacity: 1;
+    height: auto;
+    z-index: 1;
+    visibility: visible;
+    margin-bottom: 0;
+    margin-top: 42px;
+    margin-left: -2.7rem;
+  }
+
+  .catalog__item {
+    margin-bottom: 16px;
+    height: auto;
+  }
+
+  .catalog__title {
+    color: @color-orange;
+  }
+
+  .catalog__arrow-svg {
+    transform: rotate(180deg);
+    fill: @color-orange;
+  }
+}
+
+@media(min-width: @tablet) {
+  .catalog__label.active {
+    .catalog__list {
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    .catalog__item {
+      margin-bottom: 16px;
+      height: auto;
+    }
+  }
+}
+
+@media(min-width: @tablet) {
+  .catalog {
+
+    &__container {
+      padding: 0 16px;
+    }
+
+    &__title {
+      font-size: 22px;
+      color: @color-blue;
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+
+    &__arrow-svg {
+      display: none;
+    }
+  
+
+    &__label {
+      display: block;
+      padding-left: 0;
+      padding-bottom: 0;
+      padding-top: 0;
+      border-bottom: none;
+      margin-bottom: 32px;
+    } 
+
+    &__wrapper {
+      padding: 104px 0;
+      columns: 2;
+    }
+
+    &__inner-img {
+      display: none;
+    }
+
+    &__item {
+      margin-bottom: 16px;
+      height: auto;
+    }
+
+    &__list {
+      position: static;
+      opacity: 1;
+      height: auto;
+      z-index: 1;
+      visibility: visible;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+      color: @color-orange;
+    }
+
+    &.is-opened { 
+
+      .catalog__close-btn {
+        top: 56px;
+      }
+    }
+  }
+}
+
+@media(min-width: @laptop) {
+  .catalog {
+    &__container {
+      padding: 0 48px;
+    }
+
+    &__wrapper {
+      columns: 3;
+    }
+
+    &.is-opened { 
+
+      .catalog__close-btn {
+        right: 0;
+      }
+    }
+  }
+}
+
+@media(min-width: @desktop) {
+  .catalog {
+    &__container {
+      padding: 0 32px;
+      max-width: 1376px;
+      margin: 0 auto;
+    }
+
+    &__wrapper {
+      columns: 4;
+    }
+  }
+}

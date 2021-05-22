@@ -1,0 +1,162 @@
+@import (reference) '../../less/variables.less';
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 16px;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: @color-white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+    border-radius: 16px;
+    transition: opacity .2s ease-out;
+  }
+
+  &__text {
+    display: block;
+    position: absolute;
+    z-index: 3;
+  }
+
+  &__text_static {
+    position: relative;
+    z-index: 3;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    border-radius: 16px;
+    border: 2px solid transparent;
+  }
+
+ 
+  &:disabled {
+    background-color: @color-disable-canvas-btn;
+    background-image: none;
+    color: @color-disable-text-btn;
+    cursor: not-allowed;
+  }
+
+  &:hover:disabled {
+    &::after {
+      opacity: 0;
+      transition: opacity 0s;
+    }
+  } 
+}
+
+.btn_brand {
+  background-image: @color-brand-canvas-btn;
+
+  &::after {
+    background-image: @color-brand-inner-canvas-btn;
+  }
+
+  &:active::after {
+    background-image: @color-brand-active-canvas-btn;
+  }
+}
+
+.btn_blue {
+  background-image: @color-blue-canvas-btn;
+
+  &::after {
+    background-image: @color-blue-inner-canvas-btn;
+  }
+
+  &:active::after {
+    background-image: @color-blue-active-canvas-btn;
+  }
+
+  &:focus::before {
+    border-color: #0577ad;
+    background-image: @color-blue-canvas-btn;
+  }
+}
+
+.btn_preloader {
+
+  .btn__text {
+    width: 24px;
+    height: 24px;
+    background: svg-load("img/preloader.svg") center / cover no-repeat;
+    font-size: 0;
+    animation: rotate 1s linear infinite;
+  }
+}
+
+.btn_untagged {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  color: @color-blue;
+  font-size: 14px;
+  border: 2px solid @color-blue;
+  text-transform: uppercase;
+  border-radius: 16px;
+  font-weight: 500;
+  transition: background-color @transition;
+  list-style: 1;
+  padding: 8px;
+
+  &:hover {
+    background-color: #e4eff5;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #e4eff5;
+  }
+
+  &:active {
+    background-color: #9cd5f1;
+  }
+
+  &:disabled {
+    opacity: .24;
+    background-color: transparent;
+    border: solid 2px #121212;
+    color: #121212;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,69 @@
+@import (reference) '../../less/variables.less';
+
+.breadcrumbs {
+  padding-top: 0;
+  padding-bottom: 16px;
+
+  &__mobile {
+    min-width: 146px;
+    display: inline-flex;
+    font-size: 12px;
+    padding-right: 16px;
+  }
+
+  &__mobile-arrow {
+    width: 16px;
+    height: 16px;
+    fill: @color-blue;
+    margin-right: 8px;
+  }
+
+  &__mobile-text {
+    display: inline-block;
+  }
+
+  &__list {
+    display: none;
+    list-style: none;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    padding-right: 20px;
+    margin-right: 4px;
+    background: svg-load("img/icon-right.svg") center right / 16px no-repeat;
+  }
+
+  &__link {
+    display: inline-block;
+    transition: color @transition;
+
+    &:hover {
+      color: @link-hover;
+    }
+  }
+
+  &__link_active {
+    cursor: default;
+    color: @color-gray;
+
+    &:hover {
+      color: @color-gray;
+    }
+  }
+}
+
+@media(min-width: @phone) {
+  .breadcrumbs {
+    padding-top: 16px;
+    padding-bottom: 24px;
+
+    &__list {
+      display: flex;
+    }
+
+    &__mobile {
+      display: none;
+    }
+  }
+}

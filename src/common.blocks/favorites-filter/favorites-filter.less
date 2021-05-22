@@ -1,0 +1,36 @@
+@import (reference) '../../less/variables.less';
+
+.favorites-filter {
+
+  &__group:not(:last-child) {
+    margin-bottom: 42px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    padding: 16px;
+    max-width: 100%;
+    transition: color @transition;
+
+    &:hover {
+      color: @link-hover;
+    }
+  }
+
+  &__link.is-active {
+    color: @link-hover;
+    background-color: rgba(6, 151, 219, .08);
+    border-radius: 16px;
+  }
+}

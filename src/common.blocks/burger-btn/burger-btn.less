@@ -1,0 +1,21 @@
+@import (reference) '../../less/variables.less';
+
+.burger-btn {
+  width: 30px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+
+  &__row {
+    display: block;
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: @canvas-text;
+    margin: auto;
+  }
+
+  &__row:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}

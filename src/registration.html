@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <div class="container">
+        <h1 class="title_indent title_main">Регистрация</h1>
+
+        <div class="page-section">
+          <div class="registration">
+            <form class="form">
+              <ul class="registration__list">
+                <li class="registration__item">
+                  <label class="form__label form__label_middle">
+                    <span class="form__heading">ФИО</span>
+                    <input type="text" class="form__input form__input_gray_text form__input_max" placeholder="Как вас зовут?" required>
+                  </label>
+                </li>
+
+                <li class="registration__item">
+                  <label class="form__label form__label_max">
+                    <span class="form__heading">E-mail</span>
+                    <input type="email" class="form__input form__input_gray_text form__input_max" placeholder="электронная почта" required>
+                  </label>
+                </li>
+
+                <li class="registration__item registration__item_password">
+                  <label class="form__label form__label_max registration__label_indent">
+                    <span class="form__heading">пароль</span>
+                    <input type="password" class="form__input form__input_gray_text form__input_max" placeholder="введите пароль" required>
+                  </label>
+
+                  <label class="form__label form__label_max">
+                    <span class="form__heading">подтверждение пароля</span>
+                    <input type="password" class="form__input form__input_gray_text form__input_max" placeholder="введите пароль еще раз" required>
+                  </label>
+                </li>
+
+                <li class="registration__item">
+                  <label class="form__label form__label_checkbox form__label_max">
+                    <input type="checkbox" class="form__input form__input_checkbox form__input_max" checked required>
+
+                    <span class="form__checkbox-text">Я принимаю договор оферты и согласен на обработку персональных данных</span>
+
+                    <svg class="form__svg icon_size_s">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </label>
+                </li>
+              </ul>
+
+              <button type="submit" class="btn btn_brand registration__btn">
+                <span class="btn__text_static">зарегистрироваться</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+
+    <div class="thanks">
+      <div class="thanks__content">
+        <button class="thanks__close-btn">
+          <svg class="icon_size_l">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+
+        <svg class="thanks__svg icon_size_xxl">
+          <use xlink:href="#thanks"></use>
+        </svg>
+
+        <h3 class="thanks__title title title_bold title_indent">
+          Спасибо за регистрацию!
+        </h3>
+
+        <p class="thanks__desc">
+          На ваш адрес электронной почты отправлено письмо с подтверждением
+        </p>
+
+        <a href="/" class="thanks__link btn btn_brand">
+          <span class="btn__text">
+            понятно
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

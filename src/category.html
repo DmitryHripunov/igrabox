@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная страница</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link_active">Игрушки</a>
+            </li>
+          </ul>
+
+          <a href="/" class="breadcrumbs__mobile btn_untagged">
+            <svg class="breadcrumbs__mobile-arrow">
+              <use xlink:href="#arrow-back"></use>
+            </svg>
+            <span class="breadcrumbs__mobile-text">Главная страница</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="category">
+        <div class="container">
+          <h1 class="title_indent title_main">Игрушки для новорожденных</h1>
+
+          <div class="category__wrapper">
+            <div class="category__aside">
+              <aside class="filter">
+                <button type="button" class="close-btn js-close-category">
+                  <svg class="filter__close-svg icon_size_ml">
+                    <use xlink:href="#close"></use>
+                  </svg>
+                </button>
+
+                <form class="filter__form">
+                  <div class="filter__dropdown-wrapper ">
+                    <button type="button" class="filter__dropdown-btn  is-active js-acc-btn">
+                      <span class="filter__dropdown-title">Цена</span>
+
+                      <svg class="filter__dropdown-svg icon_size_l">
+                        <use xlink:href="#arrow-down"></use>
+                      </svg>
+                    </button>
+
+                    <ul class="filter__dropdown-list js-acc-content">
+                      <li class="filter__dropdown-item filter__dropdown-item_range">
+                        <div class="range-slider">
+                          <div class="range-slider__input-group">
+                            <div class="range-slider__input-wrap">
+                              <input autocomplete="off" type="text" value="100"
+                                class="range-slider__input range-input-0" data-price-min="100"
+                                data-price-current-min="100">
+
+                              <input autocomplete="off" type="text" value="100000"
+                                class="range-slider__input range-input-1" data-price-max="100000"
+                                data-price-current-max="100000">
+                              <span class="range-slider__course">₽</span>
+                            </div>
+
+                            <div class="range-slider__range">
+                              <div class="range-control"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="filter__dropdown-wrapper ">
+                    <button type="button" class="filter__dropdown-btn  is-active js-acc-btn">
+                      <span class="filter__dropdown-title">Производитель</span>
+
+                      <svg class="filter__dropdown-svg icon_size_l">
+                        <use xlink:href="#arrow-down"></use>
+                      </svg>
+                    </button>
+
+                    <ul class="filter__dropdown-list js-acc-content">
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">Cali</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">Guatemala City</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">Kansas City</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">Barcelona</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">Ottawa</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">Buenos Aires</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">Panama City</span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="filter__dropdown-wrapper ">
+                    <button type="button" class="filter__dropdown-btn  is-active js-acc-btn">
+                      <span class="filter__dropdown-title">Возраст</span>
+
+                      <svg class="filter__dropdown-svg icon_size_l">
+                        <use xlink:href="#arrow-down"></use>
+                      </svg>
+                    </button>
+
+                    <ul class="filter__dropdown-list js-acc-content">
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">0-12 месяцев</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">1-3 года</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">3-5 лет</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">5-10 лет</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">от 10 лет</span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="filter__buttons filter__dropdown-wrapper">
+                    <button type="button" class="filter__dropdown-btn  is-active js-acc-btn">
+                      <span class="filter__dropdown-title">Тип</span>
+
+                      <svg class="filter__dropdown-svg icon_size_l">
+                        <use xlink:href="#arrow-down"></use>
+                      </svg>
+                    </button>
+
+                    <div class="filter__dropdown-list js-acc-content">
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">5-10 лет</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter__dropdown-item">
+                        <div class="checkbox">
+                          <label class="checkbox__label">
+                            <input type=checkbox name="" class="checkbox__input">
+
+                            <svg class="checkbox__svg">
+                              <use xlink:href="#check"></use>
+                            </svg>
+
+                            <span class="checkbox__text ">от 10 лет</span>
+                          </label>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="filter__btn-submit btn_blue">
+                    <span class="filter__more-text"> показать ( 1124 ) </span>
+                  </button>
+
+                  <button type="reset" class="filter__btn-reset js-filter-btn-reset">очистить</button>
+                </form>
+              </aside>
+            </div>
+
+            <div class="category__body">
+              <section class="products">
+                <div class="category__hashtag">
+                  <div class="hashtag">
+                    <ul class="hashtag__list">
+                      <li class="hashtag__item">
+                        <a href="#" class="hashtag__link">Ледянки классические</a>
+                      </li>
+                      <li class="hashtag__item">
+                        <a href="#" class="hashtag__link hashtag__link_active">Ледянки круглые</a>
+                      </li>
+                      <li class="hashtag__item">
+                        <a href="#" class="hashtag__link">Ледянки мягкие</a>
+                      </li>
+                      <li class="hashtag__item">
+                        <a href="#" class="hashtag__link">Большие</a>
+                      </li>
+                      <li class="hashtag__item">
+                        <a href="#" class="hashtag__link">маленькие</a>
+                      </li>
+                      <li class="hashtag__item">
+                        <a href="#" class="hashtag__link">средние</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <form class="category__filter-form">
+                  <div class="category__filter">
+                    <div class="category__filter-wrapper">
+                      <div class="category__filter-label">Сортировка:</div>
+
+                      <select name="products-sort" class="category__filter-select">
+                        <option value="1" class="category__filter-option">по названию </option>
+                        <option value="3" class="category__filter-option"> дешевые</option>
+                        <option value="2" class="category__filter-option">дорогие </option>
+                        <option value="4" class="category__filter-option">по дате</option>
+                      </select>
+                    </div>
+
+                    <div class="category__filter-wrapper">
+                      <div class="category__filter-label">Показывать:</div>
+
+                      <ul class="category__show-list">
+                        <li class="category__show-item">
+                          <span class="category__show-link is-active">20</span>
+                        </li>
+
+                        <li class="category__show-item">
+                          <a href="#" class="category__show-link">40</a>
+                        </li>
+
+                        <li class="category__show-item">
+                          <a href="#" class="category__show-link">60</a>
+                        </li>
+
+                        <li class="category__show-item">
+                          <a href="#" class="category__show-link">все</a>
+                        </li>
+                      </ul>
+
+                      <button class="category__filter-btn_mobile js-category-filter-btn_mobile">фильтры</button>
+
+                      <a href="#shop-by-grid" class="category__filter-link js-filter-tab is-active">
+                        <svg class="icon_size_l category__filter-svg">
+                          <use xlink:href="#grid-btn"></use>
+                        </svg>
+                      </a>
+
+                      <a href="#shop-by-line" class="category__filter-link js-filter-tab">
+                        <svg class="icon_size_l category__filter-svg">
+                          <use xlink:href="#line-btn"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="products__container products__container_grid">
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products label-products_blue">Акция!</div>
+                      <div class="card__id">Код товара: 003499</div>
+                      <div class="label-products__icon card__label-icon">
+                        <svg class="label-products__svg icon_size_l">
+                          <use xlink:href="#heart"></use>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np1.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                      </p>
+
+                    </a>
+
+                    <div class="pack">
+                      <ul class="pack__list">
+                        <li class="pack__item">
+                          <div class="pack__title">Габариты упаковки</div>
+                          <div class="pack__weight">10см x 40см x 35см</div>
+                        </li>
+
+                        <li class="pack__item">
+                          <div class="pack__title">Вес упаковки</div>
+                          <div class="pack__weight">0,3 кг</div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+
+                      <h3 class="card__price card__price_old">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+
+                    ${require('./common.blocks/counter/counter.html')}
+
+                    <div class="card__footer">
+                      <div class="card__info">В наличии 2 шт.</div>
+
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+
+                      <a href="cart.html" class="btn btn_blue card__btn card__btn_action">
+                        <span class="btn__text ">купить в 1 клик</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products label-products_blue">Акция!</div>
+                      <div class="card__id">Код товара: 003499</div>
+                      <div class="label-products__icon card__label-icon">
+                        <svg class="label-products__svg icon_size_l">
+                          <use xlink:href="#heart"></use>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np2.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                      </p>
+
+                    </a>
+
+                    <div class="pack">
+                      <ul class="pack__list">
+                        <li class="pack__item">
+                          <div class="pack__title">Габариты упаковки</div>
+                          <div class="pack__weight">10см x 40см x 35см</div>
+                        </li>
+
+                        <li class="pack__item">
+                          <div class="pack__title">Вес упаковки</div>
+                          <div class="pack__weight">0,3 кг</div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+
+                      <h3 class="card__price card__price_old">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+
+                    ${require('./common.blocks/counter/counter.html')}
+
+                    <div class="card__footer">
+                      <div class="card__info">В наличии 2 шт.</div>
+
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+
+                      <a href="cart.html" class="btn btn_blue card__btn card__btn_action">
+                        <span class="btn__text ">купить в 1 клик</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products label-products_blue">Акция!</div>
+                      <div class="card__id">Код товара: 003499</div>
+                      <div class="label-products__icon card__label-icon">
+                        <svg class="label-products__svg icon_size_l">
+                          <use xlink:href="#heart"></use>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np3.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                      </p>
+
+                    </a>
+
+                    <div class="pack">
+                      <ul class="pack__list">
+                        <li class="pack__item">
+                          <div class="pack__title">Габариты упаковки</div>
+                          <div class="pack__weight">10см x 40см x 35см</div>
+                        </li>
+
+                        <li class="pack__item">
+                          <div class="pack__title">Вес упаковки</div>
+                          <div class="pack__weight">0,3 кг</div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+
+                      <h3 class="card__price card__price_old">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+
+                    ${require('./common.blocks/counter/counter.html')}
+
+                    <div class="card__footer">
+                      <div class="card__info">В наличии 2 шт.</div>
+
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+
+                      <a href="cart.html" class="btn btn_blue card__btn card__btn_action">
+                        <span class="btn__text ">купить в 1 клик</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products label-products_blue">Акция!</div>
+                      <div class="card__id">Код товара: 003499</div>
+                      <div class="label-products__icon card__label-icon">
+                        <svg class="label-products__svg icon_size_l">
+                          <use xlink:href="#heart"></use>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np1.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                      </p>
+
+                    </a>
+
+                    <div class="pack">
+                      <ul class="pack__list">
+                        <li class="pack__item">
+                          <div class="pack__title">Габариты упаковки</div>
+                          <div class="pack__weight">10см x 40см x 35см</div>
+                        </li>
+
+                        <li class="pack__item">
+                          <div class="pack__title">Вес упаковки</div>
+                          <div class="pack__weight">0,3 кг</div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+
+                      <h3 class="card__price card__price_old">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+
+                    ${require('./common.blocks/counter/counter.html')}
+
+                    <div class="card__footer">
+                      <div class="card__info">В наличии 2 шт.</div>
+
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+
+                      <a href="cart.html" class="btn btn_blue card__btn card__btn_action">
+                        <span class="btn__text ">купить в 1 клик</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products label-products_blue">Акция!</div>
+                      <div class="card__id">Код товара: 003499</div>
+                      <div class="label-products__icon card__label-icon">
+                        <svg class="label-products__svg icon_size_l">
+                          <use xlink:href="#heart"></use>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np1.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                      </p>
+
+                    </a>
+
+                    <div class="pack">
+                      <ul class="pack__list">
+                        <li class="pack__item">
+                          <div class="pack__title">Габариты упаковки</div>
+                          <div class="pack__weight">10см x 40см x 35см</div>
+                        </li>
+
+                        <li class="pack__item">
+                          <div class="pack__title">Вес упаковки</div>
+                          <div class="pack__weight">0,3 кг</div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+
+                      <h3 class="card__price card__price_old">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+
+                    ${require('./common.blocks/counter/counter.html')}
+
+                    <div class="card__footer">
+                      <div class="card__info">В наличии 2 шт.</div>
+
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+
+                      <a href="cart.html" class="btn btn_blue card__btn card__btn_action">
+                        <span class="btn__text ">купить в 1 клик</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products label-products_blue">Акция!</div>
+                      <div class="card__id">Код товара: 003499</div>
+                      <div class="label-products__icon card__label-icon">
+                        <svg class="label-products__svg icon_size_l">
+                          <use xlink:href="#heart"></use>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np1.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                      </p>
+
+                    </a>
+
+                    <div class="pack">
+                      <ul class="pack__list">
+                        <li class="pack__item">
+                          <div class="pack__title">Габариты упаковки</div>
+                          <div class="pack__weight">10см x 40см x 35см</div>
+                        </li>
+
+                        <li class="pack__item">
+                          <div class="pack__title">Вес упаковки</div>
+                          <div class="pack__weight">0,3 кг</div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+
+                      <h3 class="card__price card__price_old">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+
+                    ${require('./common.blocks/counter/counter.html')}
+
+                    <div class="card__footer">
+                      <div class="card__info">В наличии 2 шт.</div>
+
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+
+                      <a href="cart.html" class="btn btn_blue card__btn card__btn_action">
+                        <span class="btn__text ">купить в 1 клик</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn_blue category__filter-btn">
+                  <span class="btn__text">показать еще</span>
+                </button>
+
+                <div class="category__pagination-wrapper category__pagination-wrapper_separator">
+                  <div class="pagination ">
+                    <ul class="pagination__list">
+                      <li class="pagination__item">
+                        <a href="#" class="pagination__link pagination__link_svg">
+                          <svg class="pagination__arrow pagination__arrow_left icon_size_l">
+                            <use xlink:href="#arrow"></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="pagination__item">
+                        <span class="pagination__link is-active">1</span>
+                      </li>
+
+                      <li class="pagination__item">
+                        <a href="#" class="pagination__link">2</a>
+                      </li>
+
+                      <li class="pagination__item">
+                        <a href="#" class="pagination__link">3</a>
+                      </li>
+
+                      <li class="pagination__item">
+                        <a href="#" class="pagination__link">...</a>
+                        <a href="#" class="pagination__link pagination__link_floating">6</a>
+                      </li>
+
+                      <li class="pagination__item">
+                        <a href="#" class="pagination__link">205</a>
+                      </li>
+
+                      <li class="pagination__item">
+                        <a href="#" class="pagination__link pagination__link_svg">
+                          <svg class="pagination__arrow pagination__arrow_right icon_size_l">
+                            <use xlink:href="#arrow"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="category__show-button">
+                    <div class="category__filter-label">Показывать:</div>
+                    <ul class="category__show-list">
+                      <li class="category__show-item">
+                        <span class="category__show-link is-active">20</span>
+                      </li>
+
+                      <li class="category__show-item">
+                        <a href="#" class="category__show-link">40</a>
+                      </li>
+
+                      <li class="category__show-item">
+                        <a href="#" class="category__show-link">60</a>
+                      </li>
+
+                      <li class="category__show-item">
+                        <a href="#" class="category__show-link">все</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+
+    ${require('./common.blocks/order/order.html')}
+  </div>
+</body>
+
+</html>

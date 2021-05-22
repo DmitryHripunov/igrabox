@@ -1,0 +1,239 @@
+@import (reference) '../../less/variables.less';
+
+.form {
+
+  &__list {
+    list-style: none;
+    padding-bottom: 100px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: @color-gray;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  &__input,
+  &__textarea {
+    position: relative;
+    border: 2px solid @color-gray-l;
+    border-radius: 16px;
+    padding: 8px 32px 8px 16px;
+    min-height: 40px;
+    color: @canvas-text;
+
+    font: 400 15px 'Rubik';
+
+    &:focus {
+      outline: none;
+      border-color: @color-gray;
+      &::placeholder {
+        // font-size: 0;
+        opacity: .4;
+      }
+    }
+
+    &::placeholder {
+      color: @canvas-text;
+    }
+  }
+
+  &__input.form__input_gray_text {
+    &::placeholder {
+      color: @color-gray;
+    }
+  }
+
+  &__input_error {
+    .form__input {
+      border-color: @color-red-m;
+      background: svg-load('img/form-error.svg') right 8px center / 24px no-repeat;
+    }
+  }
+
+  &__input_success {
+    .form__input {
+      border-color: @color-green;
+      background: svg-load('img/form-success.svg') right 8px center / 24px no-repeat;
+    }
+  }
+
+  &__textarea {
+    min-height: 120px;
+
+    &::placeholder {
+      color: @color-gray;
+    }
+  }
+
+  &__desc {
+    margin: 8px 0 24px 0;
+  }
+
+  &__desc-text {
+    margin-bottom: 8px;
+  }
+
+  &__desc-link {
+    color: @color-orange;
+    transition: color @transition;
+
+    &:hover {
+      color: @link-hover;
+    }
+  }
+
+  &__checkbox-text {
+    position: relative;
+    color: @color-gray;
+    padding-left: 28px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      // transform: translateY(-50%);
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 2px;
+      border: solid 2px @color-gray-m;
+    }
+  }
+
+  &__input_checkbox {
+    display: none;
+  }
+
+  &__label.form__label_checkbox {
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__svg {
+    fill: @color-white;
+    display: none;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    // transform: translateY(-50%);
+  }
+
+  &__input_checkbox:checked 
+  + &__checkbox-text
+  + &__svg { 
+    display: block;
+  }
+
+  &__input_checkbox:checked 
+  + &__checkbox-text { 
+
+    &::after {
+      border: solid 2px @color-blue;
+      background-color: @color-blue;
+    }
+  }
+}
+
+@media(min-width: @tablet) {
+  .form {
+
+    &__list {
+      margin-right: 16px;
+      padding-bottom: 24px;
+    }
+
+    &__item {
+      max-width: 600px;
+    }
+
+    &__item_huge {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__input,
+    &__select,
+    &__textarea {
+      max-width: 100%;
+    }
+
+    &__label.form__label_max,
+    &__input.form__input_max {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__label.form__label_middle,
+    &__input.form__input_middle {
+      max-width: 530px;
+      width: 100%;
+    }
+
+
+    &__desc-text,
+    &__desc-link {
+      font-size: 15px;
+    }
+
+    &__checkbox-text {
+  
+      &::after {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &__svg {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  } 
+}
+
+@media(min-width: @desktop) {
+  .form {
+
+    &__label {
+      max-width: 264px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 645px;
+    }
+
+    &__input,
+    &__select {
+      width: 264px;
+    }
+
+    &__item_tel {
+      margin-left: 24px;
+    }
+
+    &__textarea {
+      max-width: 100%;
+    }
+
+    &__label_textarea,
+    &__item_textarea {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import (reference) '../../less/variables.less';
+
+.range-slider {
+
+  &__input-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 2px;
+      background-color: #d6d6d6;
+      top: 50%;
+      transform: translate(-50% -50%);
+      right: 50%;
+    }
+  }
+
+  &__input {
+    font-family: "Rubik";
+    height: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 16px;
+    border: 2px solid #e0e0e0;
+    font-size: 15px;
+    color: @color-gray;
+    // max-width: 104px;
+    width: 104px;
+  }
+
+  &__input:first-child {
+    margin-right: 48px;
+  }
+
+  &__course {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 8px;
+  }
+
+  &__range {
+    width: 90%;
+  }
+
+  .noUi-connect {
+    background: @color-blue;
+  }
+
+  .noUi-horizontal {
+    cursor: pointer;
+    height: 3px;
+    border: none;
+    background-color: #e0e0e0;
+    width: 99%;
+  }
+
+  .noUi-handle {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    top: -8px;
+    right: -16px;
+    border-radius: 100%;
+    background: @color-blue;
+    // border: 1px solid @color-blue;
+    box-shadow: none;
+    border: n;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .noUi-handle-lower {
+  }
+
+  .noUi-handle::after,
+  .noUi-handle::before {
+    display: none;
+  }
+}

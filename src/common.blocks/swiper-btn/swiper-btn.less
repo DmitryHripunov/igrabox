@@ -1,0 +1,63 @@
+@import (reference) '../../less/variables.less';
+
+.swiper-btn {
+  display: none;
+
+  &_pagination.swiper-pagination-bullets,
+  &_pagination-visible.swiper-pagination-bullets {
+    bottom: 0;
+  }
+
+  &_pagination .swiper-pagination-bullet,
+  &_pagination-visible .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media(min-width: @laptop) {
+  .swiper-btn {
+    cursor: pointer;
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    width: auto;
+    transform: translateY(-50%);
+    display: block;
+
+    &_wrapper {
+      position: absolute;
+      max-width: 1440px;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &__svg {
+      fill: @canvas-text;
+    }
+
+    &_prev {
+      left: 0;
+    }
+
+    &_next {
+      right: 0;
+    }
+
+    &_pagination.swiper-pagination-bullets {
+      display: none;
+    }
+
+    &_pagination-visible .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+    }
+  } 
+}

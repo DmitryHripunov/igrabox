@@ -1,0 +1,327 @@
+<header class="header">
+  <div class="container">
+    <div class="header__top">
+      <address class="header__top-address address">
+        <div class="address__area address__area_dropdown js-address-area" tabindex="1">
+          <span class="address__shops">Магазины</span>
+          <ol class="address__area-list address__area_hover">
+            <li class="address__area-item address__area_separator">
+              <span class="address__area-heading">Оптово-розничный склад:</span>
+              <span class="address__area-address">ул. Перспективная, 2к2</span>
+              <a href="tel:+78412200466" class="address__area-tel">+7-8412-20-04-66</a>
+            </li>
+            <li class="address__area-item">
+              <span class="address__area-heading">Оптово-розничный склад:</span>
+              <span class="address__area-address">ул. Ульяновская, 42а</span>
+              <a href="tel:+78412223522" class="address__area-tel">+7-8412-223-522</a>
+              <a href="tel:+78412248888" class="address__area-tel">+7-8412-248-888</a>
+            </li>
+          </ol>
+
+          <svg class="address__area-svg icon_size_ml">
+            <use xlink:href="#arrow-down"></use>
+          </svg>
+        </div>
+
+        <a href="tel:88002224849" class="address__tel header__address_tel">8-800-222-48-49</a>
+
+        <ul class=" address__menu-list">
+          <li class="address__menu-item">
+            <a href="#" class="address__menu-link address__menu-link_active">Акции</a>
+          </li>
+          <li class="address__menu-item">
+            <a href="articles.html" class="address__menu-link">Статьи</a>
+          </li>
+          <li class="address__menu-item">
+            <a href="#" class="address__menu-link">Доставка и оплата</a>
+          </li>
+          <li class="address__menu-item">
+            <a href="#" class="address__menu-link">Контакты</a>
+          </li>
+        </ul>
+      </address>
+
+      <nav class="header__top-nav nav">
+        <ol class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link js-authorization" href="#">Акции</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="articles.html">Статьи</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="delivery.html">Доставка и оплата</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="contacts.html">Контакты</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="header__middle">
+      <a href="/" class="header__logo">
+        <svg class="header__logo-svg">
+          <use xlink:href="#logo"></use>
+        </svg>
+      </a>
+
+      <button class="header__burger-btn burger-btn js-burger-btn">
+        <span class="burger-btn__row"></span>
+        <span class="burger-btn__row"></span>
+        <span class="burger-btn__row"></span>
+      </button>
+
+      <button class="close-btn js-close-btn">
+        <svg class="close-btn__svg icon_size_ml">
+          <use xlink:href="#close"></use>
+        </svg>
+      </button>
+
+      <ul class="header__menu">
+        <li class="header__menu-item">
+          <span class="header__menu-quantity">4</span>
+          <a class="header__menu-link header__menu_liked" href="favorites.html"></a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link header__menu_person" href="personal.html"></a>
+        </li>
+        <li class="header__menu-item">
+          <span class="header__menu-quantity">12</span>
+          <a class="header__menu-link header__menu_cart" href="cart.html"></a>
+        </li>
+      </ul>
+
+      <button class="btn btn_blue header__catalog-btn js-catalog-btn">
+        <svg class="header__catalog-svg icon_size_ml">
+          <use xlink:href="#keypad"></use>
+        </svg>
+        <span class="btn__text">каталог</span>
+      </button>
+
+      <div class="header__search">
+        <vue-search :is-visible="true" placeholder="Поиск по каталогу"></vue-search>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <a href="#" class="header__botom-promo btn_untagged">товары по Акции</a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="category.html" class="header__nav-link">Игрушки для новорожденных</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link is-active">Творчество и рукоделие</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Пазлы и головоломки</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Настольные игры</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Мягкие игрушки</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <nav class="catalog">
+    <div class="catalog__container">
+      <div class="catalog__wrapper">
+        <button class="close-btn catalog__close-btn js-close-btn">
+          <svg class="close-btn__svg icon_size_ml">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+
+        <div class="catalog__label js-label-mobile">
+          <div class="catalog__inner-img"
+            style="background: url(${require('../../static/img/catalog-icons/ci1.jpg')}) 50% 50% no-repeat; background-size: cover;">
+          </div>
+
+          <h3 class="catalog__title">Игрушки</h3>
+
+          <svg class="catalog__arrow-svg">
+            <use xlink:href="#arrow-down"></use>
+          </svg>
+
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Антистресс</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Активные и спортивные игры</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Бытовая техника для детей</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Для улицы</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Игрушечный транспорт (машинки)</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Товары для ванной</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Надувная продукция, бассейны</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Интерактивные</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Конструкторы</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Куклы и аксессуары</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Музыкальные инструменты</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Мягкие игрушки</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Настольные игры</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Радиоуправляемые</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Пазлы и головоломки</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Оружие</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Творчество и рукоделие</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Фигурки и роботы</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Игрушки для новорожденных и малышей до 2х лет</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Электронные</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Электронные</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="catalog__label js-label-mobile">
+          <div class="catalog__inner-img"
+            style="background: url(${require('../../static/img/catalog-icons/ci2.jpg')}) 50% 50% no-repeat; background-size: cover;">
+          </div>
+
+          <h3 class="catalog__title">Велосипеды</h3>
+
+          <svg class="catalog__arrow-svg">
+            <use xlink:href="#arrow-down"></use>
+          </svg>
+
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Спец-велосипеды</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Подростковые велосипеды</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Велосипеды горные</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Велосипеды женские</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Велосипеды дорожные</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Велосипеды складные</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Велосипеды с электроприводом</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Детские велосипеды</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="catalog__label js-label-mobile">
+          <div class="catalog__inner-img"
+            style="background: url(${require('../../static/img/catalog-icons/ci3.jpg')}) 50% 50% no-repeat; background-size: cover;">
+          </div>
+
+          <h3 class="catalog__title">Велозапчасти</h3>
+
+          <svg class="catalog__arrow-svg">
+            <use xlink:href="#arrow-down"></use>
+          </svg>
+
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Запчасти</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Аксессуары</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="catalog__label js-label-mobile">
+          <div class="catalog__inner-img"
+            style="background: url(${require('../../static/img/catalog-icons/ci4.jpg')}) 50% 50% no-repeat; background-size: cover;">
+          </div>
+
+          <h3 class="catalog__title">Автокресла</h3>
+
+          <svg class="catalog__arrow-svg">
+            <use xlink:href="#arrow-down"></use>
+          </svg>
+        </div>
+
+        <div class="catalog__label js-label-mobile">
+          <div class="catalog__inner-img"
+            style="background: url(${require('../../static/img/catalog-icons/ci5.jpg')}) 50% 50% no-repeat; background-size: cover;">
+          </div>
+
+          <h3 class="catalog__title">Товары для малышей</h3>
+
+          <svg class="catalog__arrow-svg">
+            <use xlink:href="#arrow-down"></use>
+          </svg>
+
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Развивающие игрушки</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Детская гигиена/Бытовая химия</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Аксессуары для купания и ванны</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Горшки детские</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Лыжи и санки</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Мебель</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+</header>

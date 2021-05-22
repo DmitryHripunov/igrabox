@@ -1,0 +1,49 @@
+@import (reference) "../../less/variables.less";
+
+.articles {
+  &__list {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    border-bottom: 2px solid @color-gray-l;
+    padding-bottom: 16px;
+  }
+
+  &__img-wrapper {
+    height: 120px;
+    width: 288px;
+    margin-bottom: 16px;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: @tablet) {
+  .articles {
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &__link {
+      display: flex;
+    }
+
+    &__img-wrapper {
+      flex: 1 0 218px;
+      margin-right: 40px;
+      margin-bottom: 0;
+      max-width: 218px;
+    }
+  }
+}

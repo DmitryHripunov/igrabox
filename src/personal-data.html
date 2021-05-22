@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <div class="container">
+        <div class="page-section">
+          <h1 class="title_indent title_main">Личный кабинет</h1>
+
+          <h2 class="title_indent title_bold">Персональная информация</h2>
+
+          <div class="personal">
+            <form class="form">
+              <ul class="personal__data-list personal__data-list_info">
+                <li class="personal__data-item">
+                  <label class="form__label form__label_max">
+                    <span class="form__heading">Фио</span>
+                    <input type="text" class="form__input form__input_max"
+                      placeholder="Владимир Владимирович Красноперекопский" required>
+                  </label>
+                </li>
+
+                <li class="personal__data-item">
+                  <label class="form__label form__label_max">
+                    <span class="form__heading">телефон</span>
+
+                    <input type="tel" class="form__input form__input_max" placeholder="+7 (999) 264-15-00" required>
+                  </label>
+                </li>
+
+                <li class="personal__data-item">
+                  <label class="form__label form__label_max">
+                    <span class="form__heading">электронная почта</span>
+
+                    <input type="email" class="form__input form__input_max" placeholder=" vv.red@huyandex.ru" required>
+                  </label>
+                </li>
+              </ul>
+
+              <button class="btn btn_blue personal__action js-submit" type="button">
+                <span class="btn__text_static">сохранить</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+
+  </div>
+
+  <div class="thanks">
+    <div class="thanks__content">
+      <button class="thanks__close-btn">
+        <svg class="icon_size_l">
+          <use xlink:href="#close"></use>
+        </svg>
+      </button>
+
+      <svg class="thanks__svg icon_size_xxl">
+        <use xlink:href="#thanks-email"></use>
+      </svg>
+
+      <h3 class="thanks__title title title_bold title_indent">
+        Заказ <span>№894789789797</span> оформлен!
+      </h3>
+
+      <p class="thanks__desc">
+        На ваш адрес электронной почты отправлено письмо со ссылкой для восстановления пароля
+      </p>
+
+      <a class="thanks__link btn btn_brand">
+        <span class="btn__text">
+          понятно
+        </span>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

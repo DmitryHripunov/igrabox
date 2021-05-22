@@ -1,0 +1,139 @@
+@import (reference) "../../less/variables.less";
+
+.comments {
+  &__title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    padding: 16px;
+    background-color: #f7f7f7;
+    border-radius: 2px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &_reply {
+      background-color: @color-blue-l;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+      .comments__text {
+        margin-bottom: 0;
+      }
+
+      .comments__data {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__data {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+
+  &__author {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-right: 8px;
+    line-height: 1;
+    flex: 1;
+  }
+
+  &__date {
+    font-weight: 500;
+    color: @color-gray;
+    margin-left: auto;
+  }
+
+  &__text {
+    line-height: 1.38;
+    margin-bottom: 16px;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__action-btn {
+    color: @color-orange;
+    border-bottom: 1px dashed @color-orange;
+    padding-bottom: 1px;
+    transition: border-color @transition;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  &__data-svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  &__write {
+    min-width: 172px;
+    max-width: 0;
+    flex: 1;
+    height: 40px;
+    padding: 8px;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @tablet) {
+  .comments {
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__item {
+      padding: 24px;
+      border-radius: 16px;
+    }
+
+    &__data {
+      margin-bottom: 24px;
+    }
+
+    &__author {
+      font-size: 18px;
+    }
+
+    &__date {
+      font-size: 15px;
+    }
+
+    &__data-svg {
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
+    }
+
+    &__text,
+    &__action-btn {
+      line-height: 1.33;
+      font-size: 15px;
+    }
+
+    &__item_reply {
+      max-width: 80%;
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import (reference) "../../less/variables.less";
+
+.section-grid {
+  &__content {
+    min-height: 300px;
+    width: 100%;
+  }
+
+  &.section-grid_indent {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: @tablet) {
+  .section-grid {
+    display: grid;
+    grid-template-columns: minmax(420px, 1fr) auto;
+    grid-template-areas: "content aside";
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-gap: 0 32px;
+
+    &__content {
+      grid-column: content;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__aside {
+      grid-column: aside;
+      position: sticky;
+      top: 16px;
+      height: 100%;
+      max-width: 420px;
+    }
+
+    &__aside-wrapper {
+      max-height: 0;
+    }
+
+    &.section-grid_indent {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@media (min-width: @laptop) {
+  .section-grid {
+    row-gap: 80px;
+  }
+}

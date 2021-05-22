@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    ${require('./common.blocks/header/header.html')}
+
+    <div class="main">
+      <div class="container">
+        <div class="page-section">
+          <div class="cart">
+            <h1 class="title title_main title_indent">Корзина(2)</h1>
+
+            <form class="form">
+              <div class="inner-wrapper">
+                <div class="cart__filter">
+                  <div class="checkbox">
+                    <label class="checkbox__label js-check-all">
+                      <input type=checkbox name="cart-check-all" class="checkbox__input js-check">
+
+                      <svg class="checkbox__svg">
+                        <use xlink:href="#check"></use>
+                      </svg>
+
+                      <span class="checkbox__text ">Выбрать все</span>
+                    </label>
+                  </div>
+
+                  <button type="reset" class="cart__filter-btn">Удалить выбранные</button>
+                </div>
+
+                <div class="products-line">
+                  <ul class="products-line__list">
+                    <li class="products-line__item">
+                      <div class="checkbox">
+                        <label class="checkbox__label checkbox__label_static">
+                          <input type=checkbox name="cart-check" class="checkbox__input">
+
+                          <svg class="checkbox__svg checkbox__svg_static">
+                            <use xlink:href="#check"></use>
+                          </svg>
+
+                          <span class="checkbox__text checkbox__text_static"></span>
+                        </label>
+                      </div>
+
+                      <div class="products-line__img"
+                        style="background: url(${require('./static/img/new-products/np1.jpg')}) 50% 50% no-repeat; background-size: cover;">
+                      </div>
+
+                      <div class="products-line__wrapper">
+                        <h3 class="products-line__title">Конструктор LEGO Technic ДУ Скоростной вездеход 42095</h3>
+                        <div class="products-line__id">Код товара: 003499</div>
+
+                        <div class="products-line__price">
+                          <div class="products-line__new-price"> 2 500 ₽</div>
+                          <div class="products-line__old-price">2 900 ₽</div>
+                        </div>
+
+                        <div class="products-line__discont">Скидка 450₽</div>
+
+                        <div class="products-line__action">
+                          ${require('./common.blocks/counter/counter.html')}
+
+                          <button type="submit" class="products-line__btn">удалить</button>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="products-line__item">
+                      <div class="checkbox">
+                        <label class="checkbox__label checkbox__label_static">
+                          <input type=checkbox name="cart-check" class="checkbox__input">
+
+                          <svg class="checkbox__svg checkbox__svg_static">
+                            <use xlink:href="#check"></use>
+                          </svg>
+
+                          <span class="checkbox__text checkbox__text_static"></span>
+                        </label>
+                      </div>
+
+                      <div class="products-line__img"
+                        style="background: url(${require('./static/img/new-products/np1.jpg')}) 50% 50% no-repeat; background-size: cover;">
+                      </div>
+
+                      <div class="products-line__wrapper">
+                        <h3 class="products-line__title">Конструктор LEGO Technic ДУ Скоростной вездеход 42095</h3>
+                        <div class="products-line__id">Код товара: 003499</div>
+
+                        <div class="products-line__price">
+                          <div class="products-line__new-price"> 2 500 ₽</div>
+                          <div class="products-line__old-price">2 900 ₽</div>
+                        </div>
+
+                        <div class="products-line__discont">Скидка 450₽</div>
+
+                        <div class="products-line__action">
+                          ${require('./common.blocks/counter/counter.html')}
+
+                          <button type="submit" class="products-line__btn">удалить</button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="order-info">
+                  <h2 class="title order-info__title">Ваша корзина</h2>
+
+                  <div class="order-info__list">
+                    <div class="order-info__item order-info__item_first">
+                      <h3 class="order-info__heading">Товары:</h3>
+                      <span class="order-info__price">3675 ₽</span>
+                    </div>
+                    <div class="order-info__item">
+                      <h3 class="order-info__heading">Скидка:</h3>
+                      <span class="order-info__price order-info__price_discont">- 450 ₽</span>
+                    </div>
+                  </div>
+
+                  <div class="order-info__list order-info__list_total">
+                    <div class="order-info__item">
+                      <h3 class="order-info__heading">Итого:</h3>
+                      <span class="order-info__price">3225 ₽</span>
+                    </div>
+                  </div>
+
+                  <a href="checkout.html" class="btn btn_brand order-info__btn">
+                    <span class="btn__text">Перейти к оформлению</span>
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ${require('./common.blocks/footer/footer.html')} -->
+  </div>
+</body>
+
+</html>

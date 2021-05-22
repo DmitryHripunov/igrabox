@@ -1,0 +1,92 @@
+@import (reference) '../../less/variables.less';
+
+.thanks {
+  position: absolute;
+  visibility: hidden;
+  z-index: -11;
+  left: 110%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0,0,0, .8);
+
+  &__content {
+    position: relative;
+    max-width: 288px;
+    padding: 40px 16px 54px 16px;
+    background-color: @color-white;
+    margin: 0 auto;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    opacity: 0;
+    overflow-y: auto;
+    transition: opacity @transition;
+  }
+
+  &__close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__svg {
+    display: block;
+    fill: @color-green;
+    display: block;
+    margin: 0 auto 16px;
+  }
+
+  &__title,
+  &__desc {
+    text-align: center;
+  }
+
+  &__desc {
+    color: @color-gray;
+    line-height: 1.38;
+  }
+
+  &__link {
+    width: 100%;
+    height: 40px;
+    margin-top: 24px;
+  }
+
+  &.is-opened {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    z-index: 100;
+    left: 0;
+
+    .thanks__content {
+      opacity: 1;
+      overflow: visible;
+    }
+  }
+}
+
+@media(min-width: @tablet) {
+  .thanks {
+
+    &__content {
+      max-width: 400px;
+      padding: 40px 24px 24px 24px;
+    }
+
+    &__desc {
+      font-size: 15px;
+      line-height: 1.33;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import (reference) "../../less/variables.less";
+
+.hashtag {
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &__link {
+    display: block;
+    background-color: rgba(204, 204, 204, 0.16);
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 16px;
+    white-space: nowrap;
+    transition: color @transition;
+
+    &:hover:not(.category__link_active) {
+      color: @link-hover;
+    }
+  }
+
+  &__link_active {
+    background: @color-brand-inner-canvas-btn;
+    color: @color-white;
+  }
+
+  &__list_wrap&__list {
+    margin: 0 0 0 -16px;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  &__item_wrap&__item {
+    margin: 0 0 16px 16px;
+  }
+}

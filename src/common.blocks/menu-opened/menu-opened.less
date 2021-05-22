@@ -1,0 +1,97 @@
+@import (reference) '../../less/variables.less';
+
+.menu-opened {
+
+  .header__top {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+    transition: opacity .2s ease;
+  }
+    
+  .header__top-address {
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: @color-white;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-left: 16px;
+  }
+
+  .address__area-svg {
+    display: none;
+  }
+
+  .header__address_tel {
+    display: block;
+    order: -1;
+    margin-bottom: 40px;
+  }
+
+  .address__menu-list {
+    display: block;
+    order: -1;
+    list-style: none;
+    margin-bottom: 40px;
+  }
+
+  .address__menu-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .address__shops {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  .close-btn {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+    right: 24px;
+    top: 24px;
+  }
+
+  .btn,
+  .header__menu,
+  .vue-search__input {
+    position: relative;
+    z-index: -1;
+  }
+}
+
+.menu-opened + .main {
+  position: relative;
+  z-index: -1;
+}
+
+@media(min-width: @phone) {
+  .menu-opened {
+    .address__area_dropdown {
+      display: block;
+    }
+  }
+}
+
+@media(min-width: @laptop) {
+  .menu-opened {
+    .address__area_hover {
+      opacity: 1;
+      z-index: 10;
+      visibility: visible;
+      position: static;
+      padding: 0;
+      max-width: 100%;
+      box-shadow: none;
+    }
+  }
+}

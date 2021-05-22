@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная страница</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link_active">Статьи</a>
+            </li>
+          </ul>
+
+          <a href="/" class="breadcrumbs__mobile btn_untagged">
+            <svg class="breadcrumbs__mobile-arrow">
+              <use xlink:href="#arrow-back"></use>
+            </svg>
+            <span class="breadcrumbs__mobile-text">Главная страница</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="page-section">
+        <div class="container">
+          <h1 class="title_indent title_main">Статьи</h1>
+
+          <div class="articles">
+            <div class="section-grid">
+              <ul class="articles__list">
+                <li class="articles__item">
+                  <a class="articles__link" href="article-page.html">
+                    <div class="articles__img-wrapper">
+                      <img class="articles__img" src="${require('./static/img/banners/banner-8.jpg')}" alt="#">
+                    </div>
+    
+                    <div class="user-content">
+                      <h2>Сложный коллоид: методология и особенности</h2>
+    
+                      <p>Разнообразный и богатый опыт реализация намеченных плановых заданий способствует подготовки и реализации соответствующий условий активизации.</p>
+                    </div>
+                  </a>
+                </li>
+  
+                <li class="articles__item">
+                  <a class="articles__link" href="article-page.html">
+                    <div class="articles__img-wrapper">
+                      <img class="articles__img" src="https://satyr.io/976x736?text=976x736" alt="#">
+                    </div>
+    
+                    <div class="user-content">
+                      <h2>
+                        Сложный коллоид: методология и особенности
+                        Сложный коллоид: методология и особенности
+                      </h2>
+    
+                      <p>
+                        Разнообразный и богатый опыт реализация намеченных плановых заданий способствует подготовки и реализации соответствующий условий активизации.
+                        Разнообразный и богатый опыт реализация намеченных плановых заданий способствует подготовки и реализации соответствующий условий активизации.
+                      </p>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="articles__item">
+                  <a class="articles__link" href="article-page.html">
+                    <div class="articles__img-wrapper">
+                      <img class="articles__img" src="https://satyr.io/976x736?text=976x736" alt="#">
+                    </div>
+    
+                    <div class="user-content">
+                      <h2>
+                        Сложный коллоид: методология и особенности
+                        Сложный коллоид: методология и особенности
+                      </h2>
+    
+                      <p>
+                        Разнообразный и богатый опыт реализация намеченных плановых заданий способствует подготовки и реализации соответствующий условий активизации.
+                        Разнообразный и богатый опыт реализация намеченных плановых заданий способствует подготовки и реализации соответствующий условий активизации.
+                      </p>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="articles__item">
+                  <a class="articles__link" href="article-page.html">
+                    <div class="articles__img-wrapper">
+                      <img class="articles__img" src="https://satyr.io/976x736?text=976x736" alt="#">
+                    </div>
+    
+                    <div class="user-content">
+                      <h2>
+                        Сложный коллоид: методология и особенности
+                        Сложный коллоид: методология и особенности
+                      </h2>
+    
+                      <p>
+                        Разнообразный и богатый опыт реализация намеченных плановых заданий способствует подготовки и реализации соответствующий условий активизации.
+                        Разнообразный и богатый опыт реализация намеченных плановых заданий способствует подготовки и реализации соответствующий условий активизации.
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              
+              ${require('./common.blocks/aside-nav/aside-nav.html')}
+            </div>
+
+            ${require('./common.blocks/pagination/pagination.html')}
+          </div>
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+@import (reference) '../../less/variables.less';
+
+.address {
+  font-style: normal;
+
+  &__menu-list {
+    display: none;
+  }
+
+  &__menu-link_active {
+    color: @link-hover;
+  }
+
+  &__area_dropdown {
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+
+  &__area-list {
+    list-style: none;
+  }
+
+  &__area-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &__area-item&__area_separator {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #eaeaea;
+  }
+
+  &__area-heading {
+    display: block;
+    font-size: 12px;
+    color: @color-gray;
+    line-height: 1.33;
+  }
+
+  &__area-address {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  &__tel {
+    display: inline-block;
+
+    &:hover {
+      color: @link-hover;
+      transition: color @transition;
+    }
+  }
+
+  &__area-tel {
+    font-size: 15px;
+    line-height: 1.33;
+    margin-right: 8px;
+
+    &:hover {
+      color: @link-hover;
+      transition: color @transition;
+    }
+  }
+}
+
+@media(min-width: @phone) {
+  .address {
+
+    &__area_dropdown {
+      display: none;
+    }
+  }
+}
+
+@media(min-width: @laptop) {
+  .address {
+    position: relative;
+    display: flex;
+
+    &__area {
+      cursor: default;
+      display: block;
+    }
+
+    &__shops {
+      cursor: pointer;
+    }
+
+    &__area_dropdown {
+      padding-right: 34px;
+      margin-right: 96px;
+    }
+
+    &__area-svg {
+      position: absolute;
+      left: 64px;
+      top: 50%;
+      fill: @color-gray-m;
+      transform: translateY(-50%);
+    }
+
+    &__area_hover {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      z-index: -10;
+      top: 100%;
+      left: 0;
+      max-width: 300px;
+      padding: 16px 16px 20px 16px;
+      border-radius: 8px;
+      box-shadow: 0 6px 14px 0 rgba(0, 24, 26, 0.08);
+      background-color: #ffffff;
+      transition: opacity @transition;
+    }
+
+    &__shops {
+      transition: color @transition;
+
+      &:hover {
+        color: @link-hover;
+      }
+    }
+
+    &__area_hover.is-active {
+        z-index: 5;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__area_hover.is-active + &__area-svg {
+      transform: rotate(-180deg) translateY(50%);
+    }
+  }
+}
+
+@media(min-width: @desktop) {
+  .address {
+    
+    &__area_dropdown {
+      padding-right: 24px;
+      margin-right: 140px;
+    }
+  }
+}

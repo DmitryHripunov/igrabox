@@ -1,0 +1,72 @@
+<div class="authorization">
+  <div class="authorization__content">
+    <button class="authorization__close close-btn js-close-btn">
+      <svg class="close-btn__svg icon_size_ml">
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+
+    <h2 class="title_bold title_indent">Авторизация</h2>
+
+    <p class="authorization__text">Вы можете войти через соцсети</p>
+
+    <ul class="authorization__list-link">
+      <li class="authorization__item-link">
+        <a href="#" class="authorization__social-link">
+          <svg class="authorization__link-svg">
+            <use xlink:href="#facebook"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="authorization__item-link">
+        <a href="#" class="authorization__social-link">
+          <svg class="authorization__link-svg">
+            <use xlink:href="#vk"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="authorization__item-link">
+        <a href="#" class="authorization__social-link">
+          <svg class="authorization__link-svg">
+            <use xlink:href="#google"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <p class="authorization__text">Или использовать данные, указанные при регистрации</p>
+
+    <form class="form">
+      <ul class="authorization__list">
+        <li class="authorization__item">
+          <label class="form__label form__label_max">
+            <span class="form__heading">E-mail</span>
+            <input type="email" class="form__input form__input_gray_text form__input_max" placeholder="электронная почта" required>
+          </label>
+        </li>
+
+        <li class="authorization__item">
+          <label class="form__label form__label_max">
+            <span class="form__heading">пароль</span>
+
+            <input type="password" class="form__input form__input_gray_text form__input_max" placeholder="введите пароль" required>
+          </label>
+        </li>
+      </ul>
+      
+      <div class="authorization__forgot">
+        <a href="#" class=" authorization__form-link js-forgot">Забыли пароль?</a>
+      </div>
+
+      <div class="authorization__footer">
+        <a href="registration.html"  class="authorization__form-link">Зарегистрироваться</a>
+
+        <button type="submit" class="btn btn_brand authorization__btn">
+          <span class="btn__text_static">войти</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

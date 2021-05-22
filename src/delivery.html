@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная страница</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link_active">Доставка и оплата</a>
+            </li>
+          </ul>
+
+          <a href="/" class="breadcrumbs__mobile btn_untagged">
+            <svg class="breadcrumbs__mobile-arrow">
+              <use xlink:href="#arrow-back"></use>
+            </svg>
+            <span class="breadcrumbs__mobile-text">Главная страница</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="page-section">
+        <div class="container">
+          <h1 class="title_indent title_main">Доставка и оплата</h1>
+
+          <div class="delivery">
+            <div class="section-grid">
+              <div class="user-content">
+                <p>
+                  Временные интервалы доставки рассчитываются в момент оформления заказа в разделе "Способ получения" и предлагаются в зависимости от введённого адреса доставки.
+                <p>
+
+                <p>
+                  Стоимость доставки товара в черте города:
+                </p>
+
+                <ul>
+                  <li>Вес до 20 кг и объем до 0,2м3- 260 рублей </li>
+                  <li>Вес до 150 кг и объем до 0,2м3- 490 рублей</li>
+                  <li>Вес до 300 кг и объем до 0,4м3 - 600 рублей</li>
+                  <li>Подъем заказа при доставке в черте города на любой этаж бесплатный.</li>
+                </ul>
+                  
+                <p>
+                  Мы осуществляем доставку в Никольск, Мокшан, Бессоновка, Башмаково, Нижний Ломов, Земетчино, Средняя Елюзань, Грабово, Белинский, Городище, Колышлей, Пачелма, Лунино, Чаадаевка, Спасск!
+                </p>
+                
+                <p>
+                  Стоимость доставки товара массой до 150 кг и/или объемом до 1,5 м3 - 390 рублей! Подъем за этаж товаров до 20 кг бесплатный, более 20 кг стоимость за этаж составит 100 рублей.
+                </p>
+                  
+                <p>
+                  Доставка выполняется 1 раз в неделю. 
+                </p>
+                
+                <p>
+                  Стоимость доставки товара по области рассчитывается в момент оформления заказа в разделе "Способ получения".
+                </p>
+               
+                <p>
+                  Подъем заказа на любой этаж бесплатный.
+                </p>
+
+                <p>
+                  Звонок курьера осуществляется ориентировочно за час до доставки, в выбранный Вами день и интервал на момент оформления заказа на сайте.
+                </p>              
+              </div>
+
+              ${require('./common.blocks/aside-nav/aside-nav.html')}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+
+  </div>
+</body>
+
+</html>

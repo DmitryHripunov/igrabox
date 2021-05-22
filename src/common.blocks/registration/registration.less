@@ -1,0 +1,41 @@
+@import (reference) '../../less/variables.less';
+
+.registration {
+
+  &__list {
+    list-style: none;
+    max-width: 530px;
+    margin-bottom: 24px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &__label_indent {
+    margin-bottom: 24px;
+  }
+
+  &__btn {
+    width: 210px;
+    height: 40px;
+  }
+}
+
+@media(min-width: @tablet) {
+  .registration {
+
+    &__list {
+      margin-bottom: 40px;
+    }
+
+    &__item_password {
+      display: flex;
+    }
+
+    &__label_indent {
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
+  }
+}

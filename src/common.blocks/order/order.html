@@ -1,0 +1,32 @@
+<div class="order">
+  <div class="order__content">
+    <h2 class="order__title">Товар добавлен в корзину</h2>
+
+    <div class="order__wrapper">
+      <div class="order__img"
+        style="background: url(${require('../../static/img/new-products/np1.jpg')}) 50% 50% no-repeat; background-size: cover;">
+      </div>
+      
+      <div class="order__inner">
+        <h3 class="order__heading">Конструктор LEGO Technic ДУ Скоростной вездеход 42095</h3>
+        <div class="order__id">Код товара: 003499</div>
+
+        <div class="order__price">2 500 ₽
+          <div class="order__old-price">2 900 ₽</div>
+        </div>
+
+        ${require('../../common.blocks/counter/counter.html')}
+      </div>
+    </div>
+
+    <div class="order__btns">
+      <button class="order__close btn_untagged js-order-close">
+        продолжить покупки
+      </button>
+
+      <a href="cart.html" class="order__link btn btn_blue">
+        <span class="btn__text">оформить заказ</span>
+      </a>
+    </div>
+  </div>
+</div>

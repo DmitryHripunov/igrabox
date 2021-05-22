@@ -1,0 +1,45 @@
+@import (reference) '../../less/variables.less';
+
+.label-products {
+  display: inline-flex;
+  border-radius: 12px;
+  padding: 0 8px;
+  font-size: 12px;
+  color: @color-white;
+  min-width: 30px;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+
+  &_blue {
+    background-color: @color-blue;
+  }
+
+  &_red {
+    background-color: @color-red;
+  }
+
+  &_green {
+    background-color: @color-green;
+  }
+
+  &_yellow {
+    background-color: @color-yellow;
+  }
+
+  &__icon {
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  &__svg {
+    fill: @canvas-text;
+  }
+
+  &__svg_colored {
+    stroke-width: 1px;
+    stroke: @color-red;
+    fill: @color-red;
+    fill-opacity: 1;
+  }
+}

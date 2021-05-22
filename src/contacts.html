@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная страница</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link_active">Контактная информация</a>
+            </li>
+          </ul>
+
+          <a href="/" class="breadcrumbs__mobile btn_untagged">
+            <svg class="breadcrumbs__mobile-arrow">
+              <use xlink:href="#arrow-back"></use>
+            </svg>
+            <span class="breadcrumbs__mobile-text">Контактная информация</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="page-section">
+          <h1 class="title_indent title_main">Личный кабинет</h1>
+
+          <div class="contacts">
+            <div class="section-grid section-grid_indent">
+              <div class="contacts__wrapper">
+                <div class="contacts__single">
+                  <h2 class="contacts__single-title">Единый телефон:</h2>
+
+                  <a href="tel:88002224849" class="contacts__single-link">8-800-222-48-49</a>
+                </div>
+
+                <h2 class="title_bold title_indent">Магазины в Пензе:</h2>
+
+                <div class="contacts__address">
+                  <h3 class="contacts__address-title">Оптово-розничный склад на Перспективной, 2, корпус 2</h3>
+
+                  <div class="contacts__address-info">
+                    <a href="tel:200466" class="contacts__address_tel contacts__address-link">20-04-66</a>
+                    <a href="mailto:delfin.58@bk.ru" class="contacts__address_email contacts__address-link">delfin.58@bk.ru</a>
+                  </div>
+                </div>
+                <div class="contacts__address">
+                  <h3 class="contacts__address-title">Оптово-розничный магазин на Ульяновской, 42а (трасса М5)</h3>
+
+                  <div class="contacts__address-info">
+                    <a href="tel:223522" class="contacts__address_tel contacts__address-link">22-35-22</a>
+                    <a href="tel:248888" class="contacts__address_tel contacts__address-link">24-88-88</a>
+                    <a href="mailto:d.m5toys@bk.ru" class="contacts__address_email contacts__address-link">d.m5toys@bk.ru</a>
+                  </div>
+                </div>
+              </div>
+
+              ${require('./common.blocks/aside-nav/aside-nav.html')}
+            </div>
+
+            <div class="contacts__map" id="contacts-map"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+
+  </div>
+</body>
+
+</html>

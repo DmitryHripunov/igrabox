@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная страница</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link_active">Статьи</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link_active">Страница статьи</a>
+            </li>
+          </ul>
+
+          <a href="/" class="breadcrumbs__mobile btn_untagged">
+            <svg class="breadcrumbs__mobile-arrow">
+              <use xlink:href="#arrow-back"></use>
+            </svg>
+            <span class="breadcrumbs__mobile-text">Страница статьи</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <article class="article-page">
+          <div class="section-grid">
+            <div class="user-content">
+              <h1>Страница статьи</h1>
+
+              <iframe 
+                width="100%" 
+                height="240px" 
+                src="https://www.youtube.com/embed/DtmtiF-aJOU" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+              
+              <p>
+                Переговорная с экраном для презентаций — не роскошь, а рабочая необходимость, когда речь идёт о
+                современном офисе. Правильный выбор профессиональных инструментов важен не только строителю, но и
+                менеджеру. Но для решения даже самых сложных задач порой достаточно вспомнить основы ведения бизнеса и
+                просто выяснить потребности.
+              </p>
+
+              <img src="https://satyr.io/976x736?text=976x736" alt="#">
+
+              <p>
+                На российском рынке под ТМ «Бюрократ» представлен широкий ассортимент канцелярских товаров собственного
+                производства. Среди них - пластиковые папки и файлы различной толщины, цветов, форматов; уголки;
+                скоросшиватели; портфели с отделениями; папки на кольцах и архивные короба, делающие работу в офисе
+                более комфортной. Всего на канцелярский рынок сегодня выведено более 1200 позиций.
+              </p>
+
+              <p>
+                Продукция бренда не раз становилась обладателем престижных титулов и наград. В 2013 году «Бюрократ» стал
+                лауреатом премии «Золотая скрепка» в номинации «Бренд года», а офисные принадлежности собственного
+                производства этой торговой марки завоевали статус победителя в номинации «Национальный продукт года».
+                Кроме того, премией был отмечен комплекс маркетинговых мероприятий, направленных на продвижение
+                продукции из пластика.
+              </p>
+            </div>
+
+            ${require('./common.blocks/aside-nav/aside-nav.html')}
+          </div>
+        </article>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+  </div>
+</body>
+
+</html>

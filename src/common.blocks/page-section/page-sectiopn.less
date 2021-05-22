@@ -1,0 +1,23 @@
+@import (reference) '../../less/variables.less';
+
+.page-section {
+  padding-bottom: 32px;
+
+  &_mb {
+    margin-bottom: 16px;
+  }
+
+  &_huge {
+    padding-bottom: 48px;
+  }
+}
+
+@media(min-width: @laptop) {
+  .page-section {
+    padding-bottom: 32px;
+
+    &_huge {
+      padding-bottom: 56px;
+    }
+  }
+}

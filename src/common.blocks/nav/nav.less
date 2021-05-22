@@ -1,0 +1,28 @@
+@import (reference) '../../less/variables.less';
+
+.nav {
+  display: none;
+}
+
+@media(min-width: @phone) {
+  .nav {
+    display: block;
+
+    &__list {
+      display: flex;
+      list-style: none;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    &__link {
+      transition: color @transition;
+
+      &:hover {
+        color: @link-hover;
+      }
+    }
+  }
+}

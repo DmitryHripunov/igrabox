@@ -1,0 +1,153 @@
+@import (reference) '../../less/variables.less';
+
+.user-content {
+
+  p:not(:first-child),
+  b:not(:first-child),
+  ul:not(:first-child),
+  ol:not(:first-child),
+  table:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  p:not(:last-child),
+  b:not(:first-child),
+  ul:not(:last-child),
+  ol:not(:last-child),
+  table:not(:first-child) {
+    margin-bottom: 16px;
+  }
+
+  h1:not(:first-child),
+  h2:not(:first-child),
+  h3:not(:first-child),
+  h4:not(:first-child),
+  h5:not(:first-child),
+  h6:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  h1:not(:last-child),
+  h2:not(:last-child),
+  h3:not(:last-child),
+  h4:not(:last-child),
+  h5:not(:last-child),
+  h6:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.45;
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+  h4 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  h5 {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+
+  h6 {
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 12px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  img:not(:first-child),
+  iframe:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  img:not(:last-child),
+  iframe:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.33;
+    // margin: 16px 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+    font-size: 15px;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  iframe {
+    border-radius: 16px;
+  }
+}
+
+@media(min-width: @tablet) {
+  .user-content {
+
+    h1 {
+      font-size: 36px;
+      line-height: 1.33;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p:not(:first-child),
+    b:not(:first-child),
+    ul:not(:first-child),
+    ol:not(:first-child),
+    table:not(:first-child) {
+      margin-top: 40px;
+    }
+  
+    p:not(:last-child),
+    b:not(:first-child),
+    ul:not(:last-child),
+    ol:not(:last-child),
+    table:not(:first-child) {
+      margin-bottom: 40px;
+    }
+  
+  
+    p {
+      font-size: 15px;
+      // margin: 40px 0;
+    }
+  }
+}

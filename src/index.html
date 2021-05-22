@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <div class="hero">
+        <div class="container">
+          <div class="page-section">
+            <div class="hero__container">
+              <div class="hero__swiper">
+                <div class="swiper-container hero__swiper-container js-hero-swipre">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#" class="hero__swiper-link">
+                        <img class="hero__swiper-img" src="${require('./static/img/banners/main-banner.jpg')}" alt="#">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="hero__swiper-link">
+                        <img class="hero__swiper-img" src="https://satyr.io/860x346?text=860x346" alt="#">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="hero__swiper-link">
+                        <img class="hero__swiper-img" src="https://satyr.io/860x346?text=860x346" alt="#">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination hero__swiper-pagination"></div>
+                  
+                  <div class="swiper-btn swiper-btn_prev hero__btn_prev">
+                    <svg class="swiper-btn__svg icon_size_xl">
+                      <use xlink:href="#swiper-arrow-left"></use>
+                    </svg>
+                  </div>
+
+                  <div class="swiper-btn swiper-btn_next hero__btn_next">
+                    <svg class="swiper-btn__svg icon_size_xl">
+                      <use xlink:href="#swiper-arrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero__aside">
+                <a href="#" class="hero__aside-link">
+                  <img src="${require('./static/img/banners/banner-3.jpg')}" alt="#" class="hero__aside-img">
+                </a>
+                <a href="#" class="hero__aside-link">
+                  <img src="https://satyr.io/416x156?text=416x156" alt="#" class="hero__aside-img">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="products">
+        <div class="container">
+          <div class="page-section">
+            <h2 class="products__title title_indent title">Новинки</h2>
+  
+            <div class="swiper-container js-new-products">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products label-products_blue">Акция!</div>
+                      <div class="label-products__icon">
+                        <svg class="label-products__svg label-products__svg_colored icon_size_l">
+                          <use xlink:href="#heart_colored"></use>
+                        </svg>
+                      </div>
+                    </div>
+  
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np1.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                        Багажник для велосипеда 26"-28"
+                        Багажник для велосипеда 26"-28"
+                      </p>
+                    </a>
+  
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+  
+                    <div class="card__footer">
+                      <div class="card__info">В наличии 2 шт.</div>
+  
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products__icon">
+                        <svg class="label-products__svg icon_size_l">
+                          <use xlink:href="#heart"></use>
+                        </svg>
+                      </div>
+                    </div>
+  
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np2.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                      </p>
+                    </a>
+  
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+  
+                    <div class="card__footer">
+                      <div class="card__info">В наличии 2041 шт.</div>
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products label-products_red">Успей купить!</div>
+                      <div class="label-products__icon">
+                        <svg class="label-products__svg icon_size_l">
+                          <use xlink:href="#heart"></use>
+                        </svg>
+                      </div>
+                    </div>
+  
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np3.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                      </p>
+                    </a>
+  
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+  
+                    <div class="card__footer">
+                      <div class="card__info">В наличии 204 шт.</div>
+  
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products label-products_green">Лидер продаж</div>
+                      <div class="label-products__icon">
+                        <svg class="label-products__svg icon_size_l">
+                          <use xlink:href="#heart"></use>
+                        </svg>
+                      </div>
+                    </div>
+  
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np4.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                      </p>
+                    </a>
+  
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+  
+                    <div class="card__footer">
+                      <div class="card__info">В наличии шт.</div>
+  
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products label-products_yellow">Новинка</div>
+                      <div class="label-products__icon">
+                        <svg class="label-products__svg icon_size_l">
+                          <use xlink:href="#heart"></use>
+                        </svg>
+                      </div>
+                    </div>
+  
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np5.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                      </p>
+                    </a>
+  
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+  
+                    <div class="card__footer">
+                      <div class="card__info">В наличии 204 шт.</div>
+  
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card__label-wrapper">
+                      <div class="label-products label-products_blue">Акция!</div>
+                      <div class="label-products__icon">
+                        <svg class="label-products__svg label-products__svg_colored icon_size_l">
+                          <use xlink:href="#heart_colored"></use>
+                        </svg>
+                      </div>
+                    </div>
+  
+                    <a href="item.html" class="card__link">
+                      <div class="card__img-wrapper">
+                        <img src="${require('./static/img/new-products/np1.jpg')}" alt="" class="card__img">
+                      </div>
+                      <p class="card__copy">
+                        Багажник для велосипеда 26"-28"
+                      </p>
+                    </a>
+  
+                    <div class="card__body">
+                      <h3 class="card__price">
+                        2 840
+                        <span class="card__currency">₽</span>
+                      </h3>
+                    </div>
+  
+                    <div class="card__footer">
+                      <div class="card__info">В наличии 2 шт.</div>
+  
+                      <a href="#" class="btn btn_brand card__btn js-card-action">
+                        <span class="btn__text">в корзину</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="swiper-pagination swiper-btn_pagination new-products_pagination"></div>
+            </div>
+  
+            <div class="swiper-btn_wrapper">
+              <div class="swiper-btn swiper-btn_prev new-products_prev">
+                <svg class="swiper-btn__svg icon_size_xl">
+                  <use xlink:href="#swiper-arrow-left"></use>
+                </svg>
+              </div>
+  
+              <div class="swiper-btn swiper-btn_next new-products_next">
+                <svg class="swiper-btn__svg icon_size_xl">
+                  <use xlink:href="#swiper-arrow-right"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="marketing">
+        <div class="container">
+          <div class="page-section">
+            <div class="swiper-container marketing__swiper-container js-marketing">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide marketing__slide">
+                  <a href="#" class="marketing__link marketing__link_huge">
+                    <img src="${require('./static/img/banners/banner-marketing.jpg')}" alt="" class="marketing__img">
+                  </a>
+                </div>
+  
+                <div class="swiper-slide marketing__slide">
+                  <a href="#" class="marketing__link marketing__link_huge">
+                    <img src="https://satyr.io/1312x272?text=1312x272" alt="" class="marketing__img">
+                  </a>
+                </div>
+              </div>
+  
+              <div class="swiper-pagination swiper-btn_pagination-visible marketing__swiper-pagination "></div>
+            </div>
+  
+            <ul class="marketing__bottom">
+              <li class="marketing__bottom-item">
+                <a href="$" class="marketing__link">
+                  <img class="marketing__bottom-img" src="${require('./static/img/banners/banner-3.jpg')}" alt="">
+                </a>
+              </li>
+  
+              <li class="marketing__bottom-item">
+                <a href="$" class="marketing__link">
+                  <img class="marketing__bottom-img" src="https://satyr.io/416x156?text=image" alt="">
+                </a>
+              </li>
+  
+              <li class="marketing__bottom-item">
+                <a href="$" class="marketing__link">
+                  <img class="marketing__bottom-img" src="${require('./static/img/banners/banner-3.jpg')}" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <section class="products">
+        <div class="container">
+          <div class="page-section">
+            <h2 class="products__title title_indent title">Успей купить</h2>
+  
+            <div class="swiper-container buy-products js-buy-products">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+  
+                <div class="swiper-slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+  
+                <div class="swiper-slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+  
+                <div class="swiper-slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+  
+                <div class="swiper-slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+  
+                <div class="swiper-slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+  
+                <div class="swiper-slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+  
+                <div class="swiper-slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+              </div>
+              <div class="swiper-pagination swiper-btn_pagination buy-products_pagination"></div>
+            </div>
+  
+            <div class="swiper-btn_wrapper">
+              <div class="swiper-btn swiper-btn_prev buy-products_prev">
+                <svg class="swiper-btn__svg icon_size_xl">
+                  <use xlink:href="#swiper-arrow-left"></use>
+                </svg>
+              </div>
+  
+              <div class="swiper-btn swiper-btn_next buy-products_next">
+                <svg class="swiper-btn__svg icon_size_xl">
+                  <use xlink:href="#swiper-arrow-right"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="user-content">
+        <div class="container">
+          <h1>Товары для детей в интернет-магазине Играбокс</h1>
+
+          <p>
+            Bushwick meh Blue Bottle pork belly mustache skateboard 3 wolf moon. Actually beard single-origin coffee,
+            twee 90”s PBR Echo Park sartorial try-hard freegan Portland ennui. Selvage jean shorts 90”s, Vice American
+            Apparel try-hard food truck Shoreditch fap lomo Wes Anderson. Art party Thundercats High Life Tumblr,
+            sartorial vinyl deep v fixie McSweeney’s fap tousled Intelligentsia mumblecore.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+
+    ${require('./common.blocks/order/order.html')}
+
+    ${require('./common.blocks/authorization/authorization.html')}
+
+    ${require('./common.blocks/forgot/forgot.html')}
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>«Играбокс» — интернет-магазин товаров для детей в Пензе</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная страница</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link_active">Личный кабинет</a>
+            </li>
+          </ul>
+
+          <a href="/" class="breadcrumbs__mobile btn_untagged">
+            <svg class="breadcrumbs__mobile-arrow">
+              <use xlink:href="#arrow-back"></use>
+            </svg>
+            <span class="breadcrumbs__mobile-text">Главная страница</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="page-section">
+          <h1 class="title_indent title_main">Личный кабинет</h1>
+
+          <div class="personal">
+            <ul class="personal__list">
+              <li class="personal__item">
+                <a href="#profile" class="personal__link is-active js-personal-btn">профиль</a>
+              </li>
+              <li class="personal__item">
+                <a href="#order-history" class="personal__link js-personal-btn">Заказы</a>
+              </li>
+            </ul>
+
+            <section id="profile" class="personal__section is-active">
+              <div class="personal__body">
+                <div class="personal__content">
+                  <h2 class="personal__title">Персональная информация</h2>
+                  <ul class="personal__data-list">
+                    <li class="personal__data-item">
+                      <span class="personal__label">ФИО</span>
+                      <div class="personal__info">Владимир Владимирович Красноперекопский</div>
+                    </li>
+
+                    <li class="personal__data-item">
+                      <span class="personal__label">Телефон</span>
+                      <div class="personal__info">+7 (999) 264-15-00</div>
+                    </li>
+
+                    <li class="personal__data-item">
+                      <span class="personal__label">Электронная почта</span>
+                      <div class="personal__info">vv.red@huyandex.ru</div>
+                    </li>
+                  </ul>
+
+                  <a href="personal-data.html" class="personal__action btn btn_blue">
+                    <span class="btn__text_static">Изменить данные</span>
+                  </a>
+                </div>
+
+                <div class="personal__content">
+                  <h2 class="personal__title">Смена пароля</h2>
+
+                  <form class="form">
+                    <ul class="personal__data-list">
+                      <li class="personal__data-item">
+                        <label class="form__label">
+                          <span class="form__heading">старый пароль</span>
+                          <input type="password" class="form__input" required>
+                        </label>
+                      </li>
+
+                      <li class="personal__data-item">
+                        <label class="form__label">
+                          <span class="form__heading">Новый пароль</span>
+
+                          <input type="password" class="form__input" required>
+                        </label>
+                      </li>
+
+                      <li class="personal__data-item">
+                        <label class="form__label">
+                          <span class="form__heading">Новый пароль еще раз</span>
+
+                          <input type="password" class="form__input" required>
+                        </label>
+                      </li>
+                    </ul>
+
+                    <button class="btn btn_blue personal__action" type="submit">
+                      <span class="btn__text_static">сохранить</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </section>
+
+            <section id="order-history" class="personal__section">
+              <div class="personal__body">
+                <ul class="personal__order-list">
+                  <li class="personal__order-item ">
+                    <div class="personal__order-wrapper js-personal-acc">
+                      <div class="personal__order-info_number">№ 002345</div>
+                      <div class="personal__order-info_date">от 22.01.2021</div>
+                      <div class="personal__order-info_text">Сумма заказа:</div>
+                      <div class="personal__order-info_price">2 650 ₽</div>
+                      <div class="personal__order-info_success">Выдан</div>
+                      <svg class="personal__order-info_svg icon_size_l">
+                        <use xlink:href="#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <form class="personal__history-form js-personal-content">
+                      <ul class="personal__history-list">
+                        <li class="personal__history-item">
+                          <div class="personal__history-wrapper">
+                            <h3 class="personal__history-title">
+                              Велопокрышка 26"x2.35" H-5136DH Chao Yang E108005 60TPI Dual defense/Pro bead+3C DH
+                              compound
+                            </h3>
+
+                            <div class="personal__history-info">
+                              <div class="personal__history-price">2 650 ₽</div>
+                              
+                              <div class="personal__history-count"> 1 шт.</div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="personal__history-item">
+                          <div class="personal__history-wrapper">
+                            <h3 class="personal__history-title">
+                              "Тёма", автомобиль-коммунальная спецмашина
+                            </h3>
+
+                            <div class="personal__history-info">
+                              <div class="personal__history-price">650 ₽</div>
+
+                              <div class="personal__history-count">
+                                <span class="personal__history-footnote">325 ₽ х</span>
+                                2 шт.
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <button type="submit" class="personal__history-btn btn btn_brand">
+                        <span class="btn__text_static">повторить заказ</span>
+                        <svg class="icon_size_m personal__history-svg">
+                          <use xlink:href="#refresh"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </li>
+
+                  <li class="personal__order-item ">
+                    <div class="personal__order-wrapper js-personal-acc">
+                      <div class="personal__order-info_number">№ 002345</div>
+                      <div class="personal__order-info_date">от 22.01.2021</div>
+                      <div class="personal__order-info_text">Сумма заказа:</div>
+                      <div class="personal__order-info_price">2 650 ₽</div>
+                      <div class="personal__order-info_cancel">Отменен</div>
+                      <svg class="personal__order-info_svg icon_size_l">
+                        <use xlink:href="#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <form class="personal__history-form js-personal-content">
+                      <ul class="personal__history-list">
+                        <li class="personal__history-item">
+                          <div class="personal__history-wrapper">
+                            <h3 class="personal__history-title">
+                              "Тёма", автомобиль-коммунальная спецмашина
+                            </h3>
+
+                            <div class="personal__history-info">
+                              <div class="personal__history-price">650 ₽</div>
+
+                              <div class="personal__history-count">
+                                <span class="personal__history-footnote">325 ₽ х</span>
+                                2 шт.
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <button type="submit" class="personal__history-btn btn btn_brand">
+                        <span class="btn__text_static">повторить заказ</span>
+                        <svg class="icon_size_m personal__history-svg">
+                          <use xlink:href="#refresh"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+
+  </div>
+</body>
+
+</html>
